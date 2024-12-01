@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header background-content">
+      <div class="header__logo">
+        <img src="./images/header/JL_logo.png" alt="JL_logo" />
+      </div>
+      <nav>
+        <ul class="header__nav-bar">
+          <li><a href="#" class="hidden" id="focusmeplease">Home</a></li>
+          <li><a href="#">Now Selling</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="background-style"></div>
+
+    <main>
+      <section class="hero background-content container">
+        <article class="hero__item1">
+          <h2 class="hero__h2">Find the perfect home for yourself</h2>
+          <p class="hero__text">
+            Move into a space that inspires greatness at every turn. Whether
+            it’s for family or business, our properties offer the perfect blend
+            of comfort and inspiration.
+          </p>
+          <button class="hero__button">
+            <div class="hero__button-text">Explore</div>
+            <div>
+              <img src="./images/hero/arrow_left.svg" alt="left_arrow" />
+            </div>
+          </button>
+        </article>
+        <article class="hero__item2">
+          <img src="./images/hero/hero_image.png" alt="image" />
+        </article>
+        <article class="hero__item3">
+          <div class="hero__subsidiaries">
+            <h3>Subsidiaries</h3>
+          </div>
+          <div class="hero__cards">
+            <div class="hero__icons">
+              <img src="./images/hero/casa_vendas.png" alt="casa_vendas" />
+              <img src="./images/hero/JL_mgt.png" alt="JL_management" />
+              <img src="./images/hero/JL_security.png" alt="JL_security" />
+              <img
+                src="./images/hero/orlin_construction.png"
+                alt="orlin_construction"
+              />
+              <img src="./images/hero/paint_master.png" alt="paint_master" />
+            </div>
+            <div class="hero__figures">
+              <div>
+                <h2 class="hero__figures-h2">2050+</h2>
+                <p class="hero__figures-p">Satisfied Customers</p>
+              </div>
+              <div>
+                <h2 class="hero__figures-h2">12+</h2>
+                <p class="hero__figures-p">Years of Service</p>
+              </div>
+              <div>
+                <h2 class="hero__figures-h2">1800+</h2>
+                <p class="hero__figures-p">Developed Houses</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="showcase overlay">
+        <article class="showcase__vid">
+          <div class="showcase__btn-container background-content">
+            <img
+              src="./images/showcase/play_btn.png"
+              alt="play-button"
+              class="showcase__play-btn"
+              onclick="openModal()"
+            />
+          </div>
+
+          <!-- Modal window -->
+          <div id="videoModal" class="showcase__modal-container">
+            <div class="showcase__modal-content">
+              <button class="showcase__close-button" onclick="closeModal()">
+                <img src="./images/showcase/close_icon.png" alt="close_icon" />
+              </button>
+              <video id="modalVideo">
+                <source
+                  src="./videos/video_2024-11-30_10-49-22.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </article>
+        <article class="showcase__item2 background-content">
+          <div>
+            <h2 class="showcase__h2">Why Choose JL Properties?</h2>
+          </div>
+          <div>
+            <h2 class="showcase__number">1</h2>
+            <p class="showcase__text">
+              Our developments, like Lindsay Gardens, incorporate eco-friendly
+              features and modern designs that promote comfortable, sustainable
+              living in prime locations
+            </p>
+          </div>
+          <div>
+            <h2 class="showcase__number">2</h2>
+            <p class="showcase__text">
+              JL Properties provides continuous support even after the sale,
+              ensuring that homeowners receive assistance with any
+              property-related issues
+            </p>
+            <button>See More</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="residence background-content">
+        <article class="residence__item1">
+          <h2 class="residence__h2">Our Best Residence</h2>
+          <p class="residence__p1">
+            Modern spaces, prime locations, and endless possibilities. Our
+            properties are designed for progress and positioned to make a
+            lasting impact.
+          </p>
+          <div class="residence__image1">
+            <img
+              src="./images/residence/house-exterior.png"
+              alt="house-outside"
+            />
+          </div>
+        </article>
+        <article class="residence__item2">
+          <div class="residence__image2">
+            <img
+              src="./images/residence/house-interior.png"
+              alt="house-inside"
+            />
+          </div>
+          <p class="residence__p2">
+            Invest smart, grow confidently. Discover properties that provide a
+            reliable foundation for your business’s growth and long-term
+            success.
+          </p>
+        </article>
+        <article class="residence__item3">
+          <div class="residence__slider-container">
+            <div class="residence__slider" id="vidSlider">
+              <div class="residence__video-card index">
+                <video src="video1.mp4"></video>
+                <button class="residence__play-button" onclick="enterModal(0)">
+                  <img
+                    src="./images/residence/play-btn.png"
+                    alt="play"
+                    height="33.29"
+                  />
+                </button>
+              </div>
+              <div class="residence__video-card second">
+                <video src="video2.mp4"></video>
+                <button class="residence__play-button" onclick="enterModal(1)">
+                  <img
+                    src="./images/residence/play-btn.png"
+                    alt="play"
+                    height="33.29"
+                  />
+                </button>
+              </div>
+              <div class="residence__video-card third">
+                <video src="video3.mp4"></video>
+                <button class="residence__play-button" onclick="enterModal(2)">
+                  <img
+                    src="./images/residence/play-btn.png"
+                    alt="play"
+                    height="33.29"
+                  />
+                </button>
+              </div>
+              <button class="residence__arrow-right" onclick="moveSlide()">
+                <img
+                  src="./images/residence/play-btn.png"
+                  alt="move-right"
+                  height="30"
+                />
+              </button>
+            </div>
+            <div class="residence__indicators">
+              <div class="residence__indicator residence__active"></div>
+              <div class="residence__indicator"></div>
+              <div class="residence__indicator"></div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="residence__modal" id="vidModal">
+            <video controls id="modalVid"></video>
+            <button class="residence__close-button" onclick="exitModal()">
+              <img src="./images/residence/close_icon.png" alt="exit" />
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app/js/index.js"></script>
+  </body>
+</html>

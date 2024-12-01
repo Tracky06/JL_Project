@@ -1,0 +1,220 @@
+@use "../util/" as *;
+
+.showcase {
+  width: 100%;
+  height: rem(926);
+  transform: translateY(rem(133));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-bottom: rem(130);
+
+  @include breakpoint(small) {
+    width: 100%;
+    height: rem(720);
+    margin-bottom: rem(148);
+  }
+
+  &__vid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn-container {
+    width: rem(76.67);
+    height: rem(76.67);
+    align-self: center;
+    top: rem(258);
+    position: absolute;
+
+    @include breakpoint(small) {
+      top: rem(322);
+    }
+  }
+
+  &__play-btn {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  &__modal-content {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    & video {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__close-button {
+    width: rem(36);
+    height: rem(36);
+    border-radius: 50%;
+    border: none;
+    background-color: var(--text-white);
+    position: fixed;
+    top: rem(10);
+    right: rem(10);
+    z-index: 100;
+
+    & img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__item2 {
+    display: flex;
+    flex-direction: column;
+    gap: rem(44);
+    position: absolute;
+    top: rem(425);
+
+    @include breakpoint(small) {
+      flex-direction: row;
+      top: rem(534);
+      justify-content: space-between;
+      //gap: rem(30);
+      margin: 0 rem(133) rem(59) rem(163);
+    }
+
+    & div:nth-child(2) {
+      display: flex;
+      gap: rem(21);
+      margin: 0 rem(71) 0 rem(47);
+
+      @include breakpoint(small) {
+        gap: rem(4);
+        margin: 0;
+      }
+
+      & p {
+        width: rem(244);
+        height: rem(75);
+
+        @include breakpoint(small) {
+          width: rem(238);
+          height: rem(90);
+        }
+      }
+    }
+
+    & div:last-child {
+      display: grid;
+      grid-template-columns: rem(58) rem(244);
+      grid-template-rows: rem(91) rem(35);
+      gap: rem(43) rem(21);
+      margin: 0 rem(71) 0 rem(45);
+
+      @include breakpoint(small) {
+        grid-template-columns: rem(58) rem(278);
+        grid-template-rows: rem(90) rem(35);
+        gap: rem(8) rem(10);
+        margin: 0;
+      }
+
+      & p {
+        width: rem(241);
+        height: rem(91);
+
+        @include breakpoint(small) {
+          width: rem(278);
+          height: rem(78);
+        }
+      }
+
+      & button {
+        grid-column: span 2;
+        width: rem(115);
+        height: rem(35);
+        border-radius: rem(20);
+        border: none;
+        background-color: var(--primary-btn);
+        color: var(--text-white);
+        justify-self: center;
+        margin-bottom: rem(90);
+        cursor: pointer;
+
+        @include breakpoint(small) {
+          justify-self: flex-end;
+        }
+      }
+    }
+  }
+
+  &__h2 {
+    width: rem(287);
+    font-weight: 800;
+    font-size: rem(40);
+    line-height: rem(40);
+    color: var(--text-white);
+    margin: 0 rem(87) 0 rem(54);
+    position: relative;
+
+    @include breakpoint(small) {
+      margin: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: rem(-26);
+      left: 0;
+      width: rem(166);
+      height: rem(9);
+      border-radius: rem(20);
+      background-color: var(--primary-btn);
+    }
+  }
+
+  &__number {
+    width: rem(45);
+    font-weight: 800;
+    font-size: rem(90);
+    line-height: rem(90);
+    color: var(--text-white2);
+    margin: 0;
+
+    @include breakpoint(small) {
+      transform: translateY(rem(-15));
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: rem(16.94);
+    font-weight: 500;
+    text-align: justify;
+    color: var(--text-white);
+  }
+}
+
+.overlay {
+  border-image: linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 1)) fill 1;
+}
+
+.hidden {
+  display: none;
+}

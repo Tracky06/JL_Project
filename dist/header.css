@@ -1,0 +1,187 @@
+.header {
+  margin: 0.5rem 6.25rem 0;
+  width: 67.5625rem;
+  background: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.1));
+  border: 0.0625rem;
+  border-radius: 1.25rem;
+  backdrop-filter: blur(100px);
+  box-shadow: -0.3125rem 0.25rem 1.25rem 0 hsla(0, 0%, 0%, 0.03);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+@media (max-width: 29.9375em) {
+  .header {
+    width: 24.5625rem;
+    height: 4.5625rem;
+    margin: 2.1875rem 1.25rem 1.4375rem 0.9375rem;
+  }
+}
+.header__logo {
+  margin: 0.9375rem 0 0.6875rem 2.875rem;
+  width: 10.4375rem;
+  height: 2.9375rem;
+}
+@media (max-width: 29.9375em) {
+  .header__logo {
+    margin: 0.9375rem 0 1.4375rem 2.875rem;
+    width: 7.75rem;
+    height: 2.1875rem;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__logo.active {
+    display: none;
+  }
+}
+.header__nav-bar {
+  margin: 0.84375rem 0 1.15625rem 10.59375rem;
+  display: flex;
+  gap: 2.5rem;
+}
+@media (max-width: 29.9375em) {
+  .header__nav-bar {
+    background-color: var(--text-white);
+    height: 100vh;
+    width: 25rem;
+    margin-top: 4.75rem;
+    position: fixed;
+    top: 0;
+    right: -43.75rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 3rem;
+    transition: 0.3s ease;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__nav-bar.active {
+    right: 0;
+  }
+}
+.header__nav-bar li {
+  list-style-type: none;
+  height: 0.9375rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+}
+@media (max-width: 29.9375em) {
+  .header__nav-bar li {
+    height: 1.875rem;
+    font-size: 1.5625rem;
+    line-height: 1.89125rem;
+  }
+}
+.header__nav-bar a {
+  text-decoration: none;
+  color: var(--text-dark1);
+  position: relative;
+  margin-bottom: 0.125rem;
+}
+@media (max-width: 29.9375em) {
+  .header__nav-bar a:after {
+    content: "";
+    width: 100%;
+    border-bottom: 0.3125rem solid transparent;
+    border-radius: 0.3125rem;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(0.3125rem);
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__nav-bar a:hover:after,
+  .header__nav-bar a:active:after {
+    display: block;
+    border-bottom-color: var(--primary-btn);
+  }
+}
+.header__menu {
+  display: none;
+}
+@media (max-width: 29.9375em) {
+  .header__menu {
+    display: block;
+    height: 1.6875rem;
+    width: 1.6875rem;
+    margin: 1.4375rem 2.8125rem 1.4375rem auto;
+    position: relative;
+    border: none;
+    background: transparent;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu span {
+    height: 0.15625rem;
+    background-color: var(--text-dark1);
+    border-radius: 1.5625rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: 0.3s ease;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu span:nth-child(2) {
+    width: 100%;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu span:nth-child(1) {
+    top: 25%;
+    width: 1.125rem;
+    transform: translateX(0.5625rem);
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu span:nth-child(3) {
+    top: 75%;
+    width: 0.84375rem;
+    transform: translateX(0.84375rem);
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu.active {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 95%);
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu.active span:nth-child(1) {
+    width: 0.84375rem;
+    height: 0.125rem;
+    top: 48%;
+    left: 48%;
+    transform: translateX(-0.4375rem) rotate(45deg);
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+}
+@media (max-width: 29.9375em) {
+  .header__menu.active span:nth-child(3) {
+    width: 0.84375rem;
+    height: 0.125rem;
+    top: 48%;
+    left: 48%;
+    transform: translateX(-0.4375rem) rotate(-45deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+@media (max-width: 29.9375em) {
+  .hidden {
+    display: inline;
+  }
+}/*# sourceMappingURL=header.css.map */

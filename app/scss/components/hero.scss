@@ -1,0 +1,234 @@
+@use "../util/" as *;
+
+.hero {
+  margin: 0 auto;
+  top: rem(131);
+  position: relative;
+
+  @include breakpoint(small) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: rem(365) auto;
+    gap: rem(49) rem(62);
+    margin: 0 rem(31) 0 rem(162);
+  }
+
+  // Styles for 1st article
+
+  &__item1 {
+    @include breakpoint(small) {
+      margin-top: rem(25);
+    }
+  }
+
+  &__h2 {
+    margin: 0 rem(57) rem(8.55) rem(61);
+    font-weight: 800;
+    font-size: rem(45);
+    line-height: rem(45);
+    color: var(--text-dark1);
+
+    @include breakpoint(small) {
+      width: rem(379);
+      margin: 0 0 rem(19);
+      font-size: rem(55);
+      line-height: rem(55);
+    }
+  }
+
+  &__text {
+    margin: 0 rem(61) rem(14) rem(65);
+    font-size: rem(12.45);
+    line-height: rem(15.06);
+    color: var(--text-dark2);
+
+    @include breakpoint(small) {
+      width: rem(392);
+      margin-left: 0;
+      font-size: rem(15);
+      line-height: rem(18.15);
+      text-align: justify;
+    }
+  }
+
+  &__button {
+    margin-left: rem(65);
+    margin-bottom: rem(40);
+    padding: rem(8.3) rem(24.89) rem(8.3) rem(24.89);
+    display: flex;
+    gap: rem(8.3);
+    align-items: center;
+    background: var(--primary-btn);
+    border: none;
+    border-radius: rem(16.6);
+    color: var(--text-white);
+    cursor: pointer;
+
+    @include breakpoint(small) {
+      margin-left: 0;
+      width: rem(127);
+      height: rem(44);
+      padding: rem(10) rem(30);
+      gap: rem(10);
+      margin-bottom: 0;
+    }
+
+    & > div > img {
+      width: rem(19.91);
+      height: rem(19.91);
+
+      @include breakpoint(small) {
+        width: rem(24);
+        height: rem(24);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button-text {
+    width: rem(36);
+    font-size: rem(9.96);
+    line-height: rem(12.05);
+
+    @include breakpoint(small) {
+      width: rem(43);
+      font-size: rem(12);
+      line-height: rem(14.52);
+    }
+  }
+
+  // Styles for 2nd article
+
+  &__item2 {
+    margin: 0 rem(12) 0 rem(39);
+    transform: translateY(rem(-70));
+
+    & img {
+      @include breakpoint(small) {
+        height: rem(500);
+        transform: translate(rem(-35), rem(-50));
+      }
+    }
+  }
+
+  // Styles for 3rd article
+
+  &__item3 {
+    grid-column: 1 / 3;
+    margin-top: rem(10);
+  }
+
+  &__subsidiaries {
+    margin: 0 rem(61) 0 rem(65);
+    transform: translateY(rem(-42));
+
+    @include breakpoint(small) {
+      transform: translateY(rem(1));
+      margin-left: 0;
+      margin-bottom: rem(34);
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: rem(13.4);
+      line-height: rem(13.4);
+      margin-bottom: 0;
+
+      @include breakpoint(small) {
+        font-size: rem(15);
+        line-height: rem(15);
+        margin-bottom: rem(6);
+      }
+    }
+  }
+
+  &__cards {
+    @include breakpoint(small) {
+      display: flex;
+      align-items: center;
+      gap: rem(226);
+      transform: translateY(rem(-35));
+    }
+  }
+
+  &__icons {
+    transform: translateY(rem(-25));
+    margin: 0 rem(61) rem(20) rem(65);
+    width: rem(302);
+    height: rem(38.68);
+    display: flex;
+    gap: rem(11.72);
+
+    @include breakpoint(small) {
+      transform: translateY(rem(5));
+      margin: 0;
+    }
+  }
+
+  &__figures {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 rem(39) rem(42);
+
+    @include breakpoint(small) {
+      transform: translateY(rem(5));
+      width: rem(453.01);
+      justify-content: flex-start;
+      gap: rem(18.19);
+      margin: 0;
+    }
+
+    & div {
+      width: rem(119.04);
+      height: rem(48);
+      border-radius: rem(19.2);
+      background: linear-gradient(
+        to bottom,
+        var(--secondary-btn1),
+        var(--secondary-btn2)
+      );
+      text-align: center;
+      color: var(--text-white);
+      margin: 0;
+      padding: rem(6.4) rem(20.48) rem(11.3);
+
+      @include breakpoint(small) {
+        width: rem(143.76);
+        height: rem(62);
+        border-radius: rem(24.8);
+      }
+    }
+
+    & div:nth-child(2) {
+      width: rem(93);
+
+      @include breakpoint(small) {
+        width: rem(109.12);
+      }
+    }
+  }
+
+  &__figures-h2 {
+    font-weight: 800;
+    font-size: rem(23.04);
+    line-height: rem(23.04);
+    margin: 0 0 rem(1.28);
+
+    @include breakpoint(small) {
+      font-size: rem(29.76);
+      line-height: rem(29.76);
+    }
+  }
+
+  &__figures-p {
+    font-weight: 500;
+    font-size: rem(6.4);
+    line-height: rem(6.4);
+    margin: 0;
+
+    @include breakpoint(small) {
+      font-size: rem(8.27);
+      line-height: rem(8.27);
+    }
+  }
+}

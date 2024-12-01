@@ -1,0 +1,56 @@
+@use "../util/" as *;
+html {
+  font: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  color: var(--text-dark1);
+
+  @include breakpoint(small) {
+    overflow-x: hidden;
+  }
+}
+
+.background-style {
+  width: rem(443.8);
+  height: rem(411.9);
+  top: rem(40);
+  left: rem(-221.44);
+  z-index: -2;
+  background-color: hsla(19, 99%, 48%, 0.05);
+  border-radius: 50%;
+  filter: blur(rem(50));
+  position: absolute;
+
+  @include breakpoint(small) {
+    width: rem(479);
+    height: rem(489.25);
+    top: rem(243.01);
+    left: rem(-239);
+  }
+}
+
+main {
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: rem(1032);
+}

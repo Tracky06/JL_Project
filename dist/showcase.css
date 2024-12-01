@@ -1,0 +1,209 @@
+.showcase {
+  width: 100%;
+  height: 57.875rem;
+  transform: translateY(8.3125rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8.125rem;
+}
+@media (min-width: 30em) {
+  .showcase {
+    width: 100%;
+    height: 45rem;
+    margin-bottom: 9.25rem;
+  }
+}
+.showcase__vid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.showcase__btn-container {
+  width: 4.791875rem;
+  height: 4.791875rem;
+  align-self: center;
+  top: 16.125rem;
+  position: absolute;
+}
+@media (min-width: 30em) {
+  .showcase__btn-container {
+    top: 20.125rem;
+  }
+}
+.showcase__play-btn {
+  width: 100%;
+  cursor: pointer;
+}
+.showcase__modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+.showcase__modal-content {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.showcase__modal-content video {
+  width: 100%;
+  height: auto;
+}
+.showcase__close-button {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-white);
+  position: fixed;
+  top: 0.625rem;
+  right: 0.625rem;
+  z-index: 100;
+}
+.showcase__close-button img {
+  width: 100%;
+  overflow: hidden;
+}
+.showcase__item2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+  position: absolute;
+  top: 26.5625rem;
+}
+@media (min-width: 30em) {
+  .showcase__item2 {
+    flex-direction: row;
+    top: 33.375rem;
+    justify-content: space-between;
+    margin: 0 8.3125rem 3.6875rem 10.1875rem;
+  }
+}
+.showcase__item2 div:nth-child(2) {
+  display: flex;
+  gap: 1.3125rem;
+  margin: 0 4.4375rem 0 2.9375rem;
+}
+@media (min-width: 30em) {
+  .showcase__item2 div:nth-child(2) {
+    gap: 0.25rem;
+    margin: 0;
+  }
+}
+.showcase__item2 div:nth-child(2) p {
+  width: 15.25rem;
+  height: 4.6875rem;
+}
+@media (min-width: 30em) {
+  .showcase__item2 div:nth-child(2) p {
+    width: 14.875rem;
+    height: 5.625rem;
+  }
+}
+.showcase__item2 div:last-child {
+  display: grid;
+  grid-template-columns: 3.625rem 15.25rem;
+  grid-template-rows: 5.6875rem 2.1875rem;
+  gap: 2.6875rem 1.3125rem;
+  margin: 0 4.4375rem 0 2.8125rem;
+}
+@media (min-width: 30em) {
+  .showcase__item2 div:last-child {
+    grid-template-columns: 3.625rem 17.375rem;
+    grid-template-rows: 5.625rem 2.1875rem;
+    gap: 0.5rem 0.625rem;
+    margin: 0;
+  }
+}
+.showcase__item2 div:last-child p {
+  width: 15.0625rem;
+  height: 5.6875rem;
+}
+@media (min-width: 30em) {
+  .showcase__item2 div:last-child p {
+    width: 17.375rem;
+    height: 4.875rem;
+  }
+}
+.showcase__item2 div:last-child button {
+  grid-column: span 2;
+  width: 7.1875rem;
+  height: 2.1875rem;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: var(--primary-btn);
+  color: var(--text-white);
+  justify-self: center;
+  margin-bottom: 5.625rem;
+  cursor: pointer;
+}
+@media (min-width: 30em) {
+  .showcase__item2 div:last-child button {
+    justify-self: flex-end;
+  }
+}
+.showcase__h2 {
+  width: 17.9375rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--text-white);
+  margin: 0 5.4375rem 0 3.375rem;
+  position: relative;
+}
+@media (min-width: 30em) {
+  .showcase__h2 {
+    margin: 0;
+  }
+}
+.showcase__h2:after {
+  content: "";
+  position: absolute;
+  bottom: -1.625rem;
+  left: 0;
+  width: 10.375rem;
+  height: 0.5625rem;
+  border-radius: 1.25rem;
+  background-color: var(--primary-btn);
+}
+.showcase__number {
+  width: 2.8125rem;
+  font-weight: 800;
+  font-size: 5.625rem;
+  line-height: 5.625rem;
+  color: var(--text-white2);
+  margin: 0;
+}
+@media (min-width: 30em) {
+  .showcase__number {
+    transform: translateY(-0.9375rem);
+  }
+}
+.showcase__text {
+  font-size: 0.875rem;
+  line-height: 1.05875rem;
+  font-weight: 500;
+  text-align: justify;
+  color: var(--text-white);
+}
+
+.overlay {
+  border-image: linear-gradient(hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%)) fill 1;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=showcase.css.map */

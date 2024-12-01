@@ -1,0 +1,10 @@
+:root {
+  --text-dark1: hsla(0, 0%, 0%, 1);
+  --text-dark2: hsla(0, 0%, 42%, 1);
+  --text-dark3: hsla(0, 0%, 44%, 1);
+  --text-white: hsla(0, 0%, 100%, 1);
+  --text-white2: hsla(0, 0%, 100%, 0.2);
+  --primary-btn: hsla(19, 99%, 48%, 1);
+  --secondary-btn1: hsla(20, 100%, 61%, 1);
+  --secondary-btn2: hsla(19, 99%, 48%, 1);
+}/*# sourceMappingURL=colors.css.map */

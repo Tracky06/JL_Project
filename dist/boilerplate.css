@@ -1,0 +1,57 @@
+html {
+  font: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  color: var(--text-dark1);
+}
+@media (min-width: 30em) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.background-style {
+  width: 27.7375rem;
+  height: 25.74375rem;
+  top: 2.5rem;
+  left: -13.84rem;
+  z-index: -2;
+  background-color: hsla(19, 99%, 48%, 0.05);
+  border-radius: 50%;
+  filter: blur(3.125rem);
+  position: absolute;
+}
+@media (min-width: 30em) {
+  .background-style {
+    width: 29.9375rem;
+    height: 30.578125rem;
+    top: 15.188125rem;
+    left: -14.9375rem;
+  }
+}
+
+main {
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 64.5rem;
+}/*# sourceMappingURL=boilerplate.css.map */
