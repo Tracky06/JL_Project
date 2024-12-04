@@ -11,7 +11,7 @@
 }
 @media (min-width: 30em) {
   .showcase {
-    width: 100%;
+    width: 80rem;
     height: 45rem;
     margin-bottom: 9.25rem;
   }

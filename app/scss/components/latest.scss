@@ -1,0 +1,124 @@
+@use "../util/" as *;
+
+.latest {
+  transform: translateY(rem(133));
+  margin: rem(99) rem(65) 0 rem(66);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(small) {
+    width: rem(1280);
+    margin: 0;
+    padding: rem(91) rem(173) rem(49) rem(174);
+    position: relative;
+  }
+
+  &__item1 {
+    & h2 {
+      width: rem(320);
+      font-weight: 800;
+      font-size: rem(40);
+      line-height: rem(40);
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__item2 {
+    & p {
+      width: rem(300);
+      margin-bottom: rem(66);
+      font-size: rem(12);
+      line-height: rem(14.52);
+      text-align: center;
+
+      @include breakpoint(small) {
+        width: rem(528);
+        margin-bottom: rem(41);
+      }
+    }
+  }
+
+  &__item3 {
+    @include breakpoint(small) {
+      display: flex;
+      gap: rem(21);
+    }
+  }
+
+  &__blog-card {
+    width: rem(297);
+    height: rem(387);
+    margin-bottom: rem(30);
+
+    & a {
+      text-decoration: none;
+      color: var(--text-dark1);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: rem(182);
+  }
+
+  &__second {
+    width: 100%;
+    height: rem(205);
+    padding: rem(27) rem(52) rem(22) rem(25);
+    background-color: hsla(0, 0%, 95%, 1);
+
+    & > h3 {
+      width: rem(241);
+      font-weight: 600;
+      font-size: rem(15);
+      line-height: rem(15.75);
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__text {
+    width: rem(231);
+    font-weight: 300;
+    font-size: rem(12);
+    line-height: rem(14.52);
+    text-align: justify;
+    margin-bottom: rem(28.8);
+  }
+
+  &__card-footer {
+    display: flex;
+    gap: rem(3.25);
+    align-items: center;
+
+    @include breakpoint(small) {
+      position: absolute;
+      top: rem(555);
+    }
+
+    & > p {
+      height: rem(10);
+      font-size: rem(8);
+      line-height: rem(9.68);
+    }
+  }
+
+  &__icon {
+    width: rem(18);
+    height: rem(18);
+  }
+
+  &__btn {
+    width: rem(121);
+    height: rem(35);
+    padding: rem(10) rem(30);
+    border-radius: rem(20);
+    border: none;
+    background-color: var(--secondary-btn2);
+    font-size: rem(12);
+    line-height: rem(14.52);
+    color: var(--text-white);
+    margin: rem(6) rem(154) 0 rem(153);
+    cursor: pointer;
+  }
+}

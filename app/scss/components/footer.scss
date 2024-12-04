@@ -1,0 +1,158 @@
+@use "../util/" as *;
+
+.footer {
+  color: var(--text-white);
+  transform: translateY(rem(133));
+  margin-top: rem(74);
+
+  @include breakpoint(small) {
+    height: rem(264);
+    width: rem(1280);
+  }
+
+  & > div {
+    background-color: hsla(0, 0%, 5%, 1);
+  }
+
+  &__item1 {
+    height: rem(487);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: rem(78) rem(127) rem(51.86);
+    row-gap: rem(40);
+    padding-top: rem(70);
+
+    @include breakpoint(small) {
+      height: rem(227);
+      margin: 0 rem(231.82) rem(47) rem(165);
+      display: flex;
+    }
+
+    & ul {
+      font-weight: 400;
+      font-size: rem(10);
+      line-height: rem(12.1);
+    }
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    & li {
+      list-style-type: none;
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__1 {
+    grid-column: span 2;
+
+    @include breakpoint(small) {
+      margin-right: rem(82);
+      width: rem(274);
+    }
+  }
+
+  &__logo {
+    width: rem(132);
+    height: rem(23);
+    margin: 0 rem(232) rem(7) rem(65);
+
+    @include breakpoint(small) {
+      margin: 0 0 rem(7);
+    }
+  }
+
+  &__text {
+    width: rem(274);
+    height: rem(48);
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: rem(12.1);
+    margin: 0 rem(90) 0 rem(65);
+
+    @include breakpoint(small) {
+      margin: 0;
+    }
+  }
+
+  &__2 {
+    margin: 0 0 0 rem(65);
+    width: rem(82);
+    height: rem(108);
+
+    @include breakpoint(small) {
+      margin: 0 rem(60) 0 0;
+    }
+
+    & > ul {
+      margin-top: rem(3);
+    }
+  }
+
+  &__3 {
+    margin: 0 rem(98) 0 0;
+    width: rem(124);
+    height: rem(127);
+
+    @include breakpoint(small) {
+      margin-right: rem(44);
+    }
+  }
+
+  &__h2 {
+    height: rem(17);
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(16.94);
+    margin-bottom: rem(10);
+  }
+
+  &__4 {
+    grid-column: span 2;
+    margin: 0 rem(147.82) rem(7) rem(65);
+
+    @include breakpoint(small) {
+      margin: 0 0 rem(7);
+    }
+  }
+
+  &__socials {
+    width: rem(217.18);
+    height: rem(17.86);
+    display: flex;
+    gap: rem(23.19);
+  }
+
+  &__icon {
+    width: rem(17.86);
+    height: rem(17.86);
+
+    & > a {
+      height: inherit;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item2 {
+    background-color: hsla(0, 0%, 0%, 1);
+    border-color: hsla(0, 0%, 0%, 1);
+    height: rem(37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__copyright {
+    width: rem(200);
+    height: rem(12);
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: rem(12.1);
+  }
+}

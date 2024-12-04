@@ -3,6 +3,17 @@
 .residence {
   transform: translateY(rem(133));
 
+  @include breakpoint(small) {
+    width: rem(1280);
+    display: flex;
+  }
+
+  &__item1 {
+    @include breakpoint(small) {
+      margin: 0 rem(25) rem(123) rem(144);
+    }
+  }
+
   // Article 1 styles
   &__h2 {
     width: rem(208);
@@ -13,6 +24,10 @@
     color: var(--text-dark1);
     margin: 0 rem(175) rem(23) rem(45);
     position: relative;
+
+    @include breakpoint(small) {
+      margin: 0 0 rem(23) 0;
+    }
 
     &:after {
       content: "";
@@ -33,12 +48,29 @@
     font-size: rem(12);
     line-height: rem(14.52);
     margin: 0 rem(111) 0 rem(45);
+
+    @include breakpoint(small) {
+      width: rem(342);
+      height: rem(60);
+      margin: 0 0 rem(32) 0;
+    }
   }
 
   &__image1 {
     width: rem(309.78);
     height: rem(230.44);
     margin: 0 rem(73.22) rem(52.89) rem(45);
+
+    @include breakpoint(small) {
+      width: rem(342);
+      height: rem(254);
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   // ******** End of Article 1 Styles ***
 
@@ -47,6 +79,17 @@
     width: rem(309.78);
     height: rem(430.67);
     margin: 0 rem(73.22) rem(24) rem(45);
+
+    @include breakpoint(small) {
+      width: rem(272);
+      height: rem(378);
+      margin: 0 rem(24) rem(26) rem(25);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__p2 {
@@ -55,152 +98,240 @@
     font-size: rem(11.34);
     line-height: rem(13.72);
     margin: 0 rem(73) rem(24.26) rem(47);
+
+    @include breakpoint(small) {
+      width: rem(274);
+      height: rem(60);
+      margin: 0 rem(20) rem(108) rem(27);
+    }
   }
   // ***** End of Article 2 Styles *******
 
   // Article 3 Styles
   &__item3 {
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    gap: (rem(10));
+    margin-left: rem(47);
+    margin-bottom: rem(83.65);
+
+    @include breakpoint(small) {
+      margin-bottom: rem(51);
+      margin-left: 0;
+    }
+  }
+
+  &__parent {
     width: rem(328);
     height: rem(397.35);
-    margin: 0 rem(53) rem(83.65) rem(47);
-  }
-
-  &__slider-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  &__slider {
-    display: flex;
-    align-items: flex-end;
+    gap: rem(15.27);
     position: relative;
-    height: 90%;
-    transition: transform 0.5s ease-in-out;
-    width: 95%;
+    align-items: flex-start;
+
+    @include breakpoint(small) {
+      width: rem(420.07);
+      height: rem(521);
+      gap: rem(20.03);
+    }
   }
 
-  &__video-card {
-    flex: 0 0 60%;
-    width: rem(255.49);
+  &__card-container {
+    width: rem(328);
+    display: flex;
     height: rem(371.21);
-    border-radius: rem(28.14);
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+
+    @include breakpoint(small) {
+      width: rem(325);
+      height: rem(486.74);
+    }
+  }
+
+  &__card {
+    width: rem(255.49);
+    height: 100%;
     position: absolute;
     left: 0;
+    border-radius: rem(28.14);
     transition: all 0.5s ease;
     transform-origin: left bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & video {
-      width: 100%;
-      height: 100%;
-      //border-radius: 10px;
-      object-fit: cover;
+    @include breakpoint(small) {
+      width: rem(325);
+      border-radius: rem(36.9);
     }
 
-    &.index {
+    &.card-active {
+      width: rem(255.49);
+      height: 100%;
       z-index: 3;
-      transform: scale(1);
-      order: 1;
 
-      & .residence__play-button {
-        display: block;
+      @include breakpoint(small) {
+        width: rem(325);
       }
     }
 
-    &.second {
+    &.card-next {
+      width: rem(213.65);
+      height: rem(310.42);
       z-index: 2;
-      transform: translateX(30%) scale(0.836);
-      order: 0;
+      transform: translateX(rem(76));
+
+      @include breakpoint(small) {
+        width: rem(270.13);
+        height: rem(407.02);
+        border-radius: rem(30.86);
+        transform: translateX(rem(99.64));
+      }
     }
 
-    &.third {
+    &.card-previous {
+      width: rem(158.64);
+      height: rem(239.68);
       z-index: 1;
-      transform: translateX(60%) scale(0.635);
-      order: -1;
-    }
-  }
+      transform: translateX(rem(169.36));
 
-  &__arrow-right {
-    position: absolute;
-    right: rem(-10);
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
+      @include breakpoint(small) {
+        width: rem(198.01);
+        height: rem(314.27);
+        transform: translateX(rem(222.07));
+      }
+    }
   }
 
   &__play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
+    width: rem(33.29);
+    height: rem(33.29);
     border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    position: absolute;
     cursor: pointer;
-    display: none;
-    z-index: 5;
+
+    @include breakpoint(small) {
+      width: rem(43.65);
+      height: rem(43.65);
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__indicators {
     width: rem(45.24);
     height: rem(10.86);
     display: flex;
-    justify-content: center;
     gap: rem(6.33);
-    margin: rem(15.27) rem(230.82) rem(83.65) rem(151.95);
+    position: absolute;
+    top: rem(386.48);
+    left: rem(104.95);
+
+    @include breakpoint(small) {
+      top: rem(506.76);
+      width: rem(59.31);
+      height: rem(14.23);
+      left: rem(127.6);
+    }
   }
 
   &__indicator {
     width: rem(10.86);
     height: rem(10.86);
-    background: hsla(0, 0%, 85%, 1);
     border-radius: 50%;
-    transition: opacity 0.3s ease;
+    background-color: hsla(0, 0%, 85%, 1);
 
-    &.residence__active {
-      background: hsla(0, 0%, 54%, 1);
+    @include breakpoint(small) {
+      width: rem(14.23);
+      height: rem(14.23);
     }
 
-    &:not(.residence__active) {
-      background: hsla(0, 0%, 85%, 1);
+    &.active-indicator {
+      background-color: hsla(0, 0%, 54%, 1);
     }
   }
 
-  &__modal {
+  &__nav-arrow {
+    width: rem(25);
+    height: rem(25);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__video-modal {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
-    align-items: center;
     justify-content: center;
-    z-index: 20;
+    align-items: center;
+    z-index: 1000;
 
-    & video {
-      width: 80%;
-      height: auto;
-      border-radius: rem(10);
+    &.show {
+      display: flex;
     }
   }
 
-  &__close-button {
-    width: rem(36);
-    height: rem(36);
-    background-color: var(--text-white);
-    position: absolute;
-    top: rem(10);
-    right: rem(20);
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 25;
+  &__video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: rem(900);
+    border-radius: rem(10);
+    overflow: hidden;
   }
+
+  &__video-modal-close {
+    position: absolute;
+    width: rem(40);
+    height: rem(40);
+    top: rem(10);
+    right: rem(10);
+    border-radius: 50%;
+    background-color: var(--text-white);
+    cursor: pointer;
+    z-index: 2000;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.card1 {
+  //background-color: red;
+  background-image: url("../images/residence/vid_carousel_image1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card2 {
+  background-image: url("../images/residence/vid_carousel_image2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card3 {
+  background-color: hsla(0, 0%, 82%, 1);
 }

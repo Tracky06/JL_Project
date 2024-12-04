@@ -1,0 +1,160 @@
+@use "../util/" as *;
+
+.discover {
+  transform: translateY(rem(133));
+
+  // Styles for item1
+  &__item1 {
+    text-align: center;
+    margin-top: rem(83.65);
+
+    @include breakpoint(small) {
+      width: rem(1280);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: rem(75);
+    }
+
+    & > h2 {
+      width: rem(293);
+      margin: 0 rem(80) rem(10) rem(55);
+
+      font-weight: 800;
+      font-size: rem(40);
+      line-height: rem(40);
+
+      @include breakpoint(small) {
+        width: rem(448);
+        margin: 0 rem(416) rem(6);
+      }
+    }
+
+    & > p {
+      //width: rem(236);
+      height: rem(15);
+      margin: 0 0 rem(19) 0;
+
+      font-size: rem(12);
+      line-height: rem(14.52);
+    }
+
+    & > button {
+      width: rem(145);
+      height: rem(35);
+      margin: 0 rem(142) rem(19) rem(141);
+      background-color: var(--secondary-btn1);
+      border: none;
+      border-radius: rem(20);
+      padding: rem(10) rem(30);
+      font-size: rem(12);
+      line-height: rem(14.52);
+      color: var(--text-white);
+      cursor: pointer;
+
+      @include breakpoint(small) {
+        margin: 0 rem(104) rem(6) rem(1031);
+        transform: translateY(rem(-35));
+      }
+    }
+  }
+  // End of styles for item1
+
+  // Styles for item2
+  &__item2 {
+    @include breakpoint(small) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: rem(21) rem(33);
+      width: rem(1028);
+      margin: 0 rem(103) rem(137) rem(145);
+    }
+  }
+
+  &__card-container {
+    width: rem(323);
+    height: rem(229);
+    margin: 0 rem(50) rem(18.17) rem(55);
+
+    @include breakpoint(small) {
+      margin: 0;
+    }
+
+    & a {
+      text-decoration: none;
+      color: var(--text-dark1);
+    }
+  }
+
+  &__card {
+    width: rem(323);
+    height: rem(229);
+    display: flex;
+    flex-direction: column;
+    gap: rem(13);
+  }
+
+  &__image {
+    width: 100%;
+    height: rem(182);
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: rem(38);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10.17);
+
+    & > h3 {
+      width: rem(172);
+      height: rem(15);
+      font-weight: 700;
+      font-size: rem(12);
+      line-height: rem(14.52);
+    }
+  }
+
+  &__last-row {
+    display: flex;
+    gap: rem(7);
+    align-items: center;
+  }
+
+  &__icon {
+    width: rem(14);
+    height: rem(14);
+  }
+
+  &__number {
+    height: rem(10);
+    font-size: rem(8);
+    line-height: rem(9.68);
+    color: var(--text-dark3);
+  }
+
+  &__thumbs-up {
+    width: rem(13);
+    height: rem(13);
+  }
+
+  &__right {
+    display: flex;
+    gap: rem(7.04);
+  }
+
+  &__location {
+    font-size: rem(7);
+    line-height: rem(8.47);
+    color: var(--text-dark3);
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}

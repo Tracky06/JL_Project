@@ -107,10 +107,7 @@
                 <img src="./images/showcase/close_icon.png" alt="close_icon" />
               </button>
               <video id="modalVideo">
-                <source
-                  src="./videos/video_2024-11-30_10-49-22.mp4"
-                  type="video/mp4"
-                />
+                <source src="./videos/video1.mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -169,62 +166,985 @@
           </p>
         </article>
         <article class="residence__item3">
-          <div class="residence__slider-container">
-            <div class="residence__slider" id="vidSlider">
-              <div class="residence__video-card index">
-                <video src="video1.mp4"></video>
-                <button class="residence__play-button" onclick="enterModal(0)">
-                  <img
-                    src="./images/residence/play-btn.png"
-                    alt="play"
-                    height="33.29"
-                  />
-                </button>
+          <div class="residence__carousel">
+            <div class="residence__parent">
+              <div class="residence__card-container">
+                <div
+                  class="residence__card card-active card1"
+                  data-index="0"
+                  data-video="./videos/video1.mp4"
+                >
+                  <button class="residence__play-button">
+                    <img src="./images/residence/play-btn.png" alt="play" />
+                  </button>
+                </div>
+                <div
+                  class="residence__card card-next card2"
+                  data-index="1"
+                  data-video="./videos/video1.mp4"
+                >
+                  <button class="residence__play-button">
+                    <img src="./images/residence/play-btn.png" alt="play" />
+                  </button>
+                </div>
+                <div
+                  class="residence__card card-previous card3"
+                  data-index="2"
+                  data-video="./videos/video1.mp4"
+                >
+                  <button class="residence__play-button">
+                    <img src="./images/residence/play-btn.png" alt="play" />
+                  </button>
+                </div>
               </div>
-              <div class="residence__video-card second">
-                <video src="video2.mp4"></video>
-                <button class="residence__play-button" onclick="enterModal(1)">
-                  <img
-                    src="./images/residence/play-btn.png"
-                    alt="play"
-                    height="33.29"
-                  />
-                </button>
+              <div class="residence__indicators">
+                <div
+                  class="residence__indicator active-indicator"
+                  data-index="0"
+                ></div>
+                <div class="residence__indicator" data-index="1"></div>
+                <div class="residence__indicator" data-index="2"></div>
               </div>
-              <div class="residence__video-card third">
-                <video src="video3.mp4"></video>
-                <button class="residence__play-button" onclick="enterModal(2)">
-                  <img
-                    src="./images/residence/play-btn.png"
-                    alt="play"
-                    height="33.29"
-                  />
-                </button>
-              </div>
-              <button class="residence__arrow-right" onclick="moveSlide()">
-                <img
-                  src="./images/residence/play-btn.png"
-                  alt="move-right"
-                  height="30"
-                />
-              </button>
             </div>
-            <div class="residence__indicators">
-              <div class="residence__indicator residence__active"></div>
-              <div class="residence__indicator"></div>
-              <div class="residence__indicator"></div>
-            </div>
-          </div>
-
-          <!-- Modal -->
-          <div class="residence__modal" id="vidModal">
-            <video controls id="modalVid"></video>
-            <button class="residence__close-button" onclick="exitModal()">
-              <img src="./images/residence/close_icon.png" alt="exit" />
+            <button class="residence__nav-arrow">
+              <img src="./images/residence/play-btn.png" alt="move" />
             </button>
+          </div>
+          <div class="residence__video-modal">
+            <div class="residence__video-modal-content">
+              <button class="residence__video-modal-close">
+                <img src="./images/residence/close_icon.png" alt="exit" />
+              </button>
+              <video controls width="100%" autoplay>
+                <source src="" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </article>
       </section>
+
+      <section class="discover">
+        <article class="discover__item1">
+          <h2>Discover <span class="no-wrap">JL Properties</span></h2>
+          <p>Find the Right Foundation for you</p>
+          <button>See properties</button>
+        </article>
+        <article class="discover__item2">
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-1.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Gardens</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">20+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Behind Achimota Mall <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-2.png"
+                  alt="house-2"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Park</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">30+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Achimota Zoom ParkAdjacent ZoomPack <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-3.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Ewuresi's Legacy (25 blocks)</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">200+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Behind the Nigerian High Commission <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-4.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Nest A,B,C,D,E & F</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">5+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Behind Spintex Palace Mall<br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-5.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Haven A (Foxton)</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">10+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Opposite Living Room Restaurant, Ambassodorial Enlcave
+                      <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-6.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Haven B</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">20+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Adjiringanor Off the Otinshie Road <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-7.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Shelby gardens</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">10+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Opposite Achimota DVLA <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-8.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Haven Annex</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">20+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Shiashie, Adjacent Presbyterian Church of Ghana <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-9.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Enclave A,B & C</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">30+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Close to Golf Hills Police Station <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-10.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Enclave D</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">200+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Behind Sofaamy <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-11.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Enclave E</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">5+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Christian Village <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-12.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Dickson's Place</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">20+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Adenta Close to Kenkey House <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-13.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Bubuashie</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">10+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Close to Datus School Complex) [Off plan <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-14.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Odeibi Heights</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">5+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">5</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Close to Former Achimota Hotel <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-15.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Sqaure</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">20+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Opposite Achimota DVLA <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-16.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Valleys</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">30+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Spintex 1 acre <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-17.png"
+                  alt="house-1"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Valleys 2</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">30+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Spintex 1 acre <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="discover__card-container">
+            <a href="#">
+              <div class="discover__card">
+                <img
+                  src="./images/discover/house-18.png"
+                  alt="house-18"
+                  class="discover__image"
+                />
+                <div class="discover__info">
+                  <div class="discover__left">
+                    <h3>Lindsay Valleys 3</h3>
+                    <div class="discover__last-row">
+                      <img
+                        src="./images/discover/home-icon.png"
+                        alt="home-icon"
+                        class="discover__icon"
+                      />
+                      <p class="discover__number">30+</p>
+                      <img
+                        src="./images/discover/thumbs-up.png"
+                        alt="thumbs-up"
+                        class="discover__thumbs-up"
+                      />
+                      <p class="discover__number">4</p>
+                    </div>
+                  </div>
+                  <div class="discover__right">
+                    <img
+                      src="./images/discover/location-icon.png"
+                      alt="location"
+                      class="discover__icon"
+                    />
+                    <p class="discover__location">
+                      Spintex 1 acre <br />
+                      GA-0276-9810
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="latest">
+        <article class="latest__item1">
+          <h2>Latest Blog Post</h2>
+        </article>
+        <article class="latest__item2">
+          <p>
+            Our blog creation service helps you build an online presence that
+            captures your voice, engages your audience, and drives results.
+          </p>
+        </article>
+        <article class="latest__item3">
+          <div class="latest__blog-card">
+            <a href="#"
+              ><img
+                src="./images/latest/content-1.png"
+                alt="blog-1"
+                class="latest__image"
+              />
+              <div class="latest__second">
+                <h3>Let’s Fight COVID-19 Together</h3>
+                <p class="latest__text">
+                  One of the  preventive strategies we  are all putting  in
+                  place in fighting COVID-19 is to protect oursevles with
+                  effective healthcare and hygiene practices, coupled with
+                  wearing our masks and staying at home.
+                </p>
+                <div class="latest__card-footer">
+                  <img
+                    src="./images/latest/profile-icon.png"
+                    alt="profile-icon"
+                    class="latest__icon"
+                  />
+                  <p>Evans Yeboah .12 Sep 2020</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="latest__blog-card">
+            <a href="#"
+              ><img
+                src="./images/latest/content-2.png"
+                alt="blog-1"
+                class="latest__image"
+              />
+              <div class="latest__second">
+                <h3>Saluting all frontliners!</h3>
+                <p class="latest__text">
+                  News is information about recent or significant events shared
+                  through media to inform the public. It covers various topics
+                  and aims to be factual and objective, helping people stay
+                  updated and make informed decisions
+                </p>
+                <div class="latest__card-footer">
+                  <img
+                    src="./images/latest/profile-icon.png"
+                    alt="profile-icon"
+                    class="latest__icon"
+                  />
+                  <p>Evans Yeboah .18 Sep 2020</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="latest__blog-card">
+            <a href="#"
+              ><img
+                src="./images/latest/content-3.png"
+                alt="blog-1"
+                class="latest__image"
+              />
+              <div class="latest__second">
+                <h3>
+                  How about we building your dream Home for up to 15% discount?
+                </h3>
+                <p class="latest__text">
+                  Wondering where to build your dream in Accra’s prominent areas
+                  but not finding your way out?
+                </p>
+                <div class="latest__card-footer">
+                  <img
+                    src="./images/latest/profile-icon.png"
+                    alt="profile-icon"
+                    class="latest__icon"
+                  />
+                  <p>Evans Yeboah .21 Sep 2020</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="latest__item4">
+          <button class="latest__btn">View More</button>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <div>
+          <article class="footer__item1">
+            <div class="footer__1">
+              <img
+                src="./images/footer/logo-white.png"
+                alt="JL__logo"
+                class="footer__logo"
+              />
+              <p class="footer__text">
+                As predominant real estate developers, we have over the years
+                played and continue to take a major role in the expansion of the
+                country's housing and infrastructural needs.
+              </p>
+            </div>
+            <div class="footer__2">
+              <h2 class="footer__h2">Quick Links</h2>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Vacancies</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer__3">
+              <h2 class="footer__h2">Legal and Privacy</h2>
+              <ul>
+                <li><a href="#">Terms & Policies</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                <li><a href="#">Brand Guidelines</a></li>
+                <li><a href="#">Other Policies</a></li>
+              </ul>
+            </div>
+            <div class="footer__4">
+              <h2 class="footer__h2">Social Media</h2>
+              <div class="footer__socials">
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/facebook.png" alt="Facebook" />
+                  </a>
+                </div>
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/instagram.png" alt="Instagram" />
+                  </a>
+                </div>
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/twitter.png" alt="Twitter" />
+                  </a>
+                </div>
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/linkedIn.png" alt="LinkedIn" />
+                  </a>
+                </div>
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/youtube.png" alt="YouTube" />
+                  </a>
+                </div>
+                <div class="footer__icon">
+                  <a href="#">
+                    <img src="./images/footer/tiktok.png" alt="TikTok" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="footer__item2">
+            <p class="footer__copyright">
+              @ 2024 JL Properties. All rights reserved.
+            </p>
+          </article>
+        </div>
+      </footer>
     </main>
 
     <script src="./app/js/index.js"></script>

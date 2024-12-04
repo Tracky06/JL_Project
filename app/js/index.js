@@ -19,14 +19,13 @@ hamMenu.addEventListener("click", () => {
 // Play video in modal window functionality
 const elements = document.querySelectorAll('.background-content');
 const modalContent = document.getElementById("videoModal");
-const originalScrollTop = modalContent.scrollTop;
+let savedScrollPosition = 0;
 
 // Open the modal and play the video
 function openModal() {
     const modal = document.getElementById('videoModal');
-    const video = document.getElementById('modalVideo');    
-
-    localStorage.setItem("scrollPosition", originalScrollTop.toString());
+    const video = document.getElementById('modalVideo');
+    savedScrollPosition = window.scrollY;
 
     modal.style.display = 'flex'; // Show the modal
     video.play(); // Start the video
@@ -43,7 +42,7 @@ function closeModal() {
     video.pause(); // Pause the video
     modal.style.display = 'none'; // Hide the modal
 
-    modalContent.scrollTop = parseInt(localStorage.getItem("scrollPosition"));
+    window.scrollTo(0, savedScrollPosition);
 
     elements.forEach((element) => {
         element.classList.remove('hidden');
@@ -52,55 +51,116 @@ function closeModal() {
 
 // ***********
 
-// Functionality of residence
-const slider = document.getElementById('vidSlider');
-        const cards = Array.from(slider.children);
-        const indicators = document.querySelectorAll('.residence__indicator');
-        const modal = document.getElementById('vidModal');
-        const modalVideo = document.getElementById('modalVid');
-        let currentIndex = 0;
+// Video carousel functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const carouselContainer = document.querySelector(".residence__parent");
+    const cards = document.querySelectorAll(".residence__card");
+    const indicators = document.querySelectorAll(".residence__indicator");
+    const navigationArrow = document.querySelector(".residence__nav-arrow");
+    const videoModal = document.querySelector(".residence__video-modal");
+    const videoElement = videoModal.querySelector("video");
+    const videoModalClose = videoModal.querySelector(".residence__video-modal-close");
+    const playButtons = document.querySelectorAll(".residence__play-button");
+    let currentIndex = 0;
+    let originalScrollPosition = 0;
 
-        // Update Indicators
-        function updateIndicators() {
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('residence__active', index === currentIndex);
-            });
-        }
+    function updateCarousel(newIndex) {
+      // Remove all position classes
+      cards.forEach((card) => {
+        card.classList.remove("card-active", "card-previous", "card-next");
+      });
+      indicators.forEach((indicator) => {
+        indicator.classList.remove("active-indicator");
+      });
 
-        // Move Slide Function
-        function moveSlide() {
-            const firstCard = cards.shift();
-            cards.push(firstCard);
+      // Determine new indices with circular rotation
+      const activeIndex = newIndex;
+      const previousIndex = (newIndex - 1 + cards.length) % cards.length;
+      const nextIndex = (newIndex + 1) % cards.length;
 
-            cards.forEach((card, index) => {
-               // card.className = 'residence__video-card';
-               card.removeAttribute("class");
-               card.setAttribute("class", "residence__video-card");
-                if (index === 0) {
-                    card.classList.add('index');
-                } else if (index === 1) {
-                    card.classList.add('second');
-                } else if (index === 2) {
-                    card.classList.add('third');
-                }
-            });
+      // Add appropriate classes
+      cards[activeIndex].classList.add("card-active");
+      cards[previousIndex].classList.add("card-previous");
+      cards[nextIndex].classList.add("card-next");
 
-            slider.appendChild(firstCard);
+      // Update indicators
+      indicators[activeIndex].classList.add("active-indicator");
 
-            // Update Current Index and Indicators
-            currentIndex = (currentIndex + 1) % cards.length;
-            updateIndicators();
-        }
+      currentIndex = activeIndex;
+    }
 
-        // Open Modal
-        function enterModal(index) {
-            modal.style.display = 'flex';
-            modalVideo.src = cards[index].querySelector('video').src;
-            modalVideo.play();
-        }
+    // Navigation Arrow
+    navigationArrow.addEventListener("click", () => {
+      const nextIndex = (currentIndex + 1) % cards.length;
+      updateCarousel(nextIndex);
+    });
 
-        // Close Modal
-        function exitModal() {
-            modal.style.display = 'none';
-            modalVideo.pause();
-        }
+    // Indicator Navigation
+    indicators.forEach((indicator) => {
+      indicator.addEventListener("click", (e) => {
+        const index = parseInt(e.target.dataset.index);
+        updateCarousel(index);
+      });
+    });
+
+    function openModal(videoSrc) {
+        originalScrollPosition = window.scrollY;
+        videoElement.src = videoSrc;
+        console.log(videoElement);
+        videoModal.classList.add("show");
+        videoElement.play();
+        console.log("Video is playing");
+      }
+
+      function closeModal(i) {
+        videoElement.pause();
+        console.log("video paused");
+        videoModal.classList.remove("show");
+        window.scrollTo(0, originalScrollPosition);
+      }
+
+    // Play Button Functionality
+    playButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const videoSrc = cards[index].dataset.video; 
+        openModal(videoSrc);
+      });
+    });
+
+    // Close Modal
+    videoModalClose.addEventListener("click", (currentIndex) => {
+        closeModal(currentIndex);
+    });
+
+    // Scroll and Keyboard Navigation
+    carouselContainer.addEventListener("wheel", (e) => {
+      if (
+        carouselContainer === document.activeElement ||
+        carouselContainer.matches(":hover")
+      ) {
+        e.preventDefault();
+        const direction = Math.sign(e.deltaY);
+        const nextIndex =
+          (currentIndex + direction + cards.length) % cards.length;
+        updateCarousel(nextIndex);
+      }
+    });
+
+    carouselContainer.addEventListener("keydown", (e) => {
+      if (
+        (carouselContainer === document.activeElement ||
+          carouselContainer.matches(":hover")) &&
+        e.key === "ArrowRight"
+      ) {
+        e.preventDefault();
+        const nextIndex = (currentIndex + 1) % cards.length;
+        updateCarousel(nextIndex);
+      }
+    });
+
+    // Make container focusable
+    carouselContainer.setAttribute("tabindex", "0");
+
+    // Initial setup
+    updateCarousel(currentIndex);
+  });

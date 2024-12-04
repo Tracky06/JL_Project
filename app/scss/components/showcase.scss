@@ -12,7 +12,7 @@
   margin-bottom: rem(130);
 
   @include breakpoint(small) {
-    width: 100%;
+    width: rem(1280);
     height: rem(720);
     margin-bottom: rem(148);
   }
