@@ -1,3 +1,4 @@
+// landing page
 @forward "header";
 @forward "hero";
 @forward "showcase";
@@ -5,3 +6,9 @@
 @forward "discover";
 @forward "latest";
 @forward "footer";
+
+//about page
+@forward "about-hero";
+@forward "about-favourite";
+@forward "about-mission";
+@forward "about-values";

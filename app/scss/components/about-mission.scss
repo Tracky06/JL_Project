@@ -1,0 +1,25 @@
+@use "../util/" as *;
+
+.about-mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem(115);
+
+  & > h2 {
+    font-weight: 800;
+    font-size: rem(25);
+    line-height: rem(30.26);
+  }
+
+  & > p {
+    width: rem(302);
+    font-size: rem(15);
+    line-height: rem(22.5);
+    text-align: center;
+
+    @include breakpoint(small) {
+      width: rem(490);
+    }
+  }
+}

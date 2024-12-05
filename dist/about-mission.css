@@ -1,0 +1,22 @@
+.about-mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7.1875rem;
+}
+.about-mission > h2 {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+}
+.about-mission > p {
+  width: 18.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.40625rem;
+  text-align: center;
+}
+@media (min-width: 30em) {
+  .about-mission > p {
+    width: 30.625rem;
+  }
+}/*# sourceMappingURL=about-mission.css.map */

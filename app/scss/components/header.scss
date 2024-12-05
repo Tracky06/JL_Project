@@ -4,7 +4,8 @@
   margin: rem(19) rem(100) 0;
   width: rem(1081);
   background: linear-gradient(hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.1));
-  border: rem(1);
+  border: rem(1) solid
+    linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1));
   border-radius: rem(20);
   backdrop-filter: blur(100px);
   box-shadow: rem(-5) rem(4) rem(20) 0 hsla(0, 0%, 0%, 0.03);

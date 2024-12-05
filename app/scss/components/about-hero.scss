@@ -1,0 +1,53 @@
+@use "../util/" as *;
+
+.about-hero {
+  height: rem(720);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-image: linear-gradient(hsla(0, 0%, 0%, 0.4), hsla(0, 0%, 0%, 0.4)) fill
+    1;
+  color: var(--text-white);
+  background-image: url("../images/about-us_hero/background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include breakpoint(small) {
+    justify-content: flex-start;
+    padding: rem(154) rem(571) rem(204) rem(203);
+    background-image: url("../images/about-us_hero/background-desktop.png");
+  }
+
+  &__h1 {
+    width: rem(304);
+    height: rem(144);
+    font-weight: 600;
+    font-size: rem(60);
+    line-height: rem(72.3);
+
+    @include breakpoint(small) {
+      width: rem(506);
+      height: rem(242);
+      font-size: rem(100);
+      line-height: rem(121.02);
+    }
+  }
+
+  &__p {
+    width: rem(290);
+    height: rem(60);
+    font-size: rem(12);
+    height: rem(14.52);
+    text-align: justify;
+
+    @include breakpoint(small) {
+      width: rem(416);
+      height: rem(120);
+      font-size: rem(20);
+      line-height: rem(24.2);
+      text-align: start;
+      transform: translateX(rem(-40));
+    }
+  }
+}

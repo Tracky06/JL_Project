@@ -1,0 +1,63 @@
+.about-favourite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6.288125rem;
+}
+@media (min-width: 30em) {
+  .about-favourite {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4.125rem;
+    margin: 5.9375rem 0 7.9375rem;
+    align-items: flex-start;
+  }
+}
+.about-favourite__text > h2 {
+  width: 18.125rem;
+  height: 1.5rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5125rem;
+  margin-top: 4.5rem;
+}
+@media (min-width: 30em) {
+  .about-favourite__text > h2 {
+    font-weight: 800;
+    font-size: 1.5625rem;
+    line-height: 1.89125rem;
+    width: 22.625rem;
+    height: 1.875rem;
+    margin: 0;
+  }
+}
+.about-favourite__text p {
+  font-size: 0.9375rem;
+  line-height: 1.40625rem;
+  text-align: justify;
+  margin: 0.4375rem 0 1.25rem;
+}
+.about-favourite__p {
+  height: 22.4375rem;
+  width: 18.375rem;
+}
+@media (min-width: 30em) {
+  .about-favourite__p {
+    width: 23.8125rem;
+    height: 17.8125rem;
+  }
+}
+.about-favourite__img {
+  width: 19.375rem;
+  height: 12.961875rem;
+}
+@media (min-width: 30em) {
+  .about-favourite__img {
+    width: 26.8125rem;
+    height: 17.9375rem;
+  }
+}
+.about-favourite__img > img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=about-favourite.css.map */

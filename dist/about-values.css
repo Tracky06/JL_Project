@@ -1,0 +1,70 @@
+.about-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4.3125rem;
+}
+@media (min-width: 30em) {
+  .about-values {
+    margin-bottom: 5.8125rem;
+  }
+}
+.about-values h2 {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+  margin-bottom: 1.4375rem;
+}
+@media (min-width: 30em) {
+  .about-values h2 {
+    margin-bottom: 3.25rem;
+  }
+}
+.about-values__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+@media (min-width: 30em) {
+  .about-values__container {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+}
+.about-values__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 17.375rem;
+  height: 22.1875rem;
+  border-radius: 1.25rem;
+  padding: 0 1.875rem 0 1.5625rem;
+}
+.about-values__card img {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+.about-values__card h3 {
+  font-weight: 800;
+  font-size: 0.9375rem;
+  line-height: 1.134375rem;
+  margin: 1.5625rem 0 0.8125rem;
+}
+.about-values__card p {
+  width: 13.9375rem;
+  height: 9.0625rem;
+  font-size: 0.9375rem;
+  line-height: 1.40625rem;
+}
+
+.purple {
+  background-color: hsl(246, 100%, 96%);
+}
+
+.cream {
+  background-color: hsl(16, 100%, 95%);
+}
+
+.pink {
+  background-color: hsl(333, 91%, 96%);
+}/*# sourceMappingURL=about-values.css.map */

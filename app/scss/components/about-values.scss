@@ -1,0 +1,75 @@
+@use "../util/" as *;
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem(69);
+
+  @include breakpoint(small) {
+    margin-bottom: rem(93);
+  }
+
+  & h2 {
+    font-weight: 800;
+    font-size: rem(25);
+    line-height: rem(30.26);
+    margin-bottom: rem(23);
+
+    @include breakpoint(small) {
+      margin-bottom: rem(52);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+
+    @include breakpoint(small) {
+      flex-direction: row;
+      gap: rem(20);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: rem(278);
+    height: rem(355);
+    border-radius: rem(20);
+    padding: 0 rem(30) 0 rem(25);
+
+    & img {
+      width: rem(42);
+      height: rem(42);
+    }
+
+    & h3 {
+      font-weight: 800;
+      font-size: rem(15);
+      line-height: rem(18.15);
+      margin: rem(25) 0 rem(13);
+    }
+
+    & p {
+      width: rem(223);
+      height: rem(145);
+      font-size: rem(15);
+      line-height: rem(22.5);
+    }
+  }
+}
+
+.purple {
+  background-color: hsla(246, 100%, 96%, 1);
+}
+
+.cream {
+  background-color: hsla(16, 100%, 95%, 1);
+}
+
+.pink {
+  background-color: hsla(333, 91%, 96%, 1);
+}

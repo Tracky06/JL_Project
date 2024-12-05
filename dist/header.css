@@ -2,7 +2,7 @@
   margin: 1.1875rem 6.25rem 0;
   width: 67.5625rem;
   background: linear-gradient(hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.1));
-  border: 0.0625rem;
+  border: 0.0625rem solid linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1));
   border-radius: 1.25rem;
   backdrop-filter: blur(100px);
   box-shadow: -0.3125rem 0.25rem 1.25rem 0 hsla(0, 0%, 0%, 0.03);

@@ -1,0 +1,68 @@
+@use "../util/" as *;
+
+.about-favourite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem(100.61);
+
+  @include breakpoint(small) {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(66);
+    margin: rem(95) 0 rem(127);
+    align-items: flex-start;
+  }
+
+  &__text {
+    & > h2 {
+      width: rem(290);
+      height: rem(24);
+      font-weight: 800;
+      font-size: rem(20);
+      line-height: rem(24.2);
+      margin-top: rem(72);
+
+      @include breakpoint(small) {
+        font-weight: 800;
+        font-size: rem(25);
+        line-height: rem(30.26);
+        width: rem(362);
+        height: rem(30);
+        margin: 0;
+      }
+    }
+
+    & p {
+      font-size: rem(15);
+      line-height: rem(22.5);
+      text-align: justify;
+      margin: rem(7) 0 rem(20);
+    }
+  }
+
+  &__p {
+    height: rem(359);
+    width: rem(294);
+
+    @include breakpoint(small) {
+      width: rem(381);
+      height: rem(285);
+    }
+  }
+
+  &__img {
+    width: rem(310);
+    height: rem(207.39);
+
+    @include breakpoint(small) {
+      width: rem(429);
+      height: rem(287);
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
