@@ -1,7 +1,5 @@
 .footer {
   color: var(--text-white);
-  transform: translateY(8.3125rem);
-  margin-top: 4.625rem;
 }
 @media (min-width: 30em) {
   .footer {
@@ -142,4 +140,8 @@
   font-weight: 400;
   font-size: 0.625rem;
   line-height: 0.75625rem;
+}
+
+.transform {
+  transform: translateY(8.3125rem);
 }/*# sourceMappingURL=footer.css.map */

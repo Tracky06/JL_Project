@@ -1,0 +1,55 @@
+@use "../util/" as *;
+
+.about-subsidiaries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem(93);
+
+  &__h2 {
+    height: rem(30);
+    width: rem(155);
+    font-weight: 800;
+    font-size: rem(25);
+    line-height: rem(30.26);
+    text-align: center;
+    margin: 0 auto rem(51);
+  }
+
+  &__logo-container {
+    width: rem(316);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: rem(45);
+
+    @include breakpoint(small) {
+      flex-flow: row nowrap;
+      gap: rem(90);
+    }
+  }
+
+  &__logo1 {
+    width: rem(180);
+    height: rem(70);
+  }
+
+  &__logo2 {
+    width: rem(90);
+    height: rem(70.29);
+  }
+
+  &__logo3 {
+    width: rem(87);
+    height: rem(69.94);
+  }
+
+  &__logo4 {
+    width: rem(136);
+    height: rem(69.94);
+  }
+  &__logo5 {
+    width: rem(94);
+    height: rem(69.94);
+  }
+}

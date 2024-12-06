@@ -47,17 +47,29 @@
     height: 17.8125rem;
   }
 }
-.about-favourite__img {
+.about-favourite__img-container {
   width: 19.375rem;
   height: 12.961875rem;
+  position: relative;
 }
 @media (min-width: 30em) {
-  .about-favourite__img {
+  .about-favourite__img-container {
     width: 26.8125rem;
     height: 17.9375rem;
   }
 }
-.about-favourite__img > img {
+.about-favourite__img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+.about-favourite__img.active-image {
+  opacity: 1;
+  z-index: 2;
 }/*# sourceMappingURL=about-favourite.css.map */

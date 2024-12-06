@@ -51,18 +51,31 @@
     }
   }
 
-  &__img {
+  &__img-container {
     width: rem(310);
     height: rem(207.39);
+    position: relative;
 
     @include breakpoint(small) {
       width: rem(429);
       height: rem(287);
     }
+  }
 
-    & > img {
-      width: 100%;
-      height: 100%;
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+
+    &.active-image {
+      opacity: 1;
+      z-index: 2;
     }
   }
 }

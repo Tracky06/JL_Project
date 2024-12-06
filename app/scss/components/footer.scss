@@ -2,8 +2,8 @@
 
 .footer {
   color: var(--text-white);
-  transform: translateY(rem(133));
-  margin-top: rem(74);
+
+  //margin-top: rem(74);
 
   @include breakpoint(small) {
     height: rem(264);
@@ -155,4 +155,8 @@
     font-size: rem(10);
     line-height: rem(12.1);
   }
+}
+
+.transform {
+  transform: translateY(rem(133));
 }

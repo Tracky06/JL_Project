@@ -1,0 +1,122 @@
+.about-subdetail {
+  margin: 1.93rem 0 4.514375rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail {
+    margin-top: 0;
+  }
+}
+@media (min-width: 30em) {
+  .about-subdetail__item {
+    display: flex;
+    gap: 6.625rem;
+    justify-content: center;
+    margin: 0 auto;
+    width: 57.3125rem;
+    padding-top: 3.625rem;
+  }
+}
+.about-subdetail__item h2 {
+  height: 1.875rem;
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+  margin: 0 0 1.0625rem 4.125rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__item h2 {
+    margin: 0 0 1.0625rem;
+  }
+}
+.about-subdetail__item p {
+  width: 19.0625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  margin: 0 auto 1.25rem;
+  text-align: justify;
+}
+@media (min-width: 30em) {
+  .about-subdetail__item p {
+    width: 30.3125rem;
+  }
+}
+.about-subdetail__item button {
+  width: 9.5625rem;
+  height: 2.1875rem;
+  margin: 0.5rem 0 1.75rem 3.875rem;
+  padding: 0.4375rem 1.625rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--primary-btn);
+  color: var(--text-white);
+  font-size: 0.875rem;
+  line-height: 1.05875rem;
+  cursor: pointer;
+}
+@media (min-width: 30em) {
+  .about-subdetail__item button {
+    background-color: var(--secondary-btn1);
+    margin: 0 0 2.125rem;
+  }
+}
+.about-subdetail__image {
+  margin: 0 auto 5.875rem;
+  width: 19.3125rem;
+  height: 16.6875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 2rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__image {
+    width: 20.375rem;
+    height: 18.8125rem;
+    margin: 0;
+  }
+}
+.about-subdetail__image img {
+  width: 100%;
+  height: 100%;
+}
+.about-subdetail__image .about-subdetail__img1 {
+  width: 12.656875rem;
+  height: 8.3125rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__image .about-subdetail__img1 {
+    width: 13.3125rem;
+    height: 8.3125rem;
+  }
+}
+.about-subdetail__image .about-subdetail__img2 {
+  width: 10.45875rem;
+  height: 10.755625rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__image .about-subdetail__img2 {
+    width: 11rem;
+    height: 11.3125rem;
+  }
+}
+.about-subdetail__image .about-subdetail__img3 {
+  width: 10.4225rem;
+  height: 9.36875rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__image .about-subdetail__img3 {
+    width: 11.125rem;
+    height: 10rem;
+  }
+}
+.about-subdetail__image .about-subdetail__img4 {
+  width: 12.698125rem;
+  height: 11.3925rem;
+}
+@media (min-width: 30em) {
+  .about-subdetail__image .about-subdetail__img4 {
+    width: 13.375rem;
+    height: 12rem;
+  }
+}/*# sourceMappingURL=about-subdetail.css.map */

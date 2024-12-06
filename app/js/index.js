@@ -164,3 +164,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial setup
     updateCarousel(currentIndex);
   });
+
+
+  // Image carousel on About Us page 
+  document.addEventListener('DOMContentLoaded', function() {
+    var container = document.querySelector('.about-favourite__img-container');
+    var slides = container.querySelectorAll('.about-favourite__img');
+    
+    var currentIndex = 0;
+    slides[currentIndex].classList.add('active-image');
+
+    function nextSlide() {
+        // Remove active class from current slide
+        slides[currentIndex].classList.remove('active-image');
+
+        // Move to next slide
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // Add active class to next slide
+        slides[currentIndex].classList.add('active-image');
+    }
+
+    // Start automatic sliding
+    setInterval(nextSlide, 3000);
+});

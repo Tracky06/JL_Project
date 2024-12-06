@@ -1,0 +1,125 @@
+@use "../util/" as *;
+
+.about-subdetail {
+  margin: rem(30.88) 0 rem(72.23);
+
+  @include breakpoint(small) {
+    margin-top: 0;
+  }
+
+  &__item {
+    @include breakpoint(small) {
+      display: flex;
+      gap: rem(106);
+      justify-content: center;
+      margin: 0 auto;
+      width: rem(917);
+      padding-top: rem(58);
+    }
+
+    & h2 {
+      height: rem(30);
+      font-weight: 800;
+      font-size: rem(25);
+      line-height: rem(30.26);
+      margin: 0 0 rem(17) rem(66);
+
+      @include breakpoint(small) {
+        margin: 0 0 rem(17);
+      }
+    }
+
+    & p {
+      width: rem(305);
+      font-size: rem(15);
+      line-height: rem(25);
+      margin: 0 auto rem(20);
+      text-align: justify;
+
+      @include breakpoint(small) {
+        width: rem(485);
+      }
+    }
+
+    & button {
+      width: rem(153);
+      height: rem(35);
+      margin: rem(8) 0 rem(28) rem(62);
+      padding: rem(7) rem(26);
+      border-radius: rem(16);
+      border: none;
+      background-color: var(--primary-btn);
+      color: var(--text-white);
+      font-size: rem(14);
+      line-height: rem(16.94);
+      cursor: pointer;
+
+      @include breakpoint(small) {
+        background-color: var(--secondary-btn1);
+        margin: 0 0 rem(34);
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto rem(94);
+    width: rem(309);
+    height: rem(267);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 96%, 1);
+    border-radius: rem(32);
+
+    @include breakpoint(small) {
+      width: rem(326);
+      height: rem(301);
+      margin: 0;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    & .about-subdetail__img1 {
+      width: rem(202.51);
+      height: rem(133);
+
+      @include breakpoint(small) {
+        width: rem(213);
+        height: rem(133);
+      }
+    }
+
+    & .about-subdetail__img2 {
+      width: rem(167.34);
+      height: rem(172.09);
+
+      @include breakpoint(small) {
+        width: rem(176);
+        height: rem(181);
+      }
+    }
+
+    & .about-subdetail__img3 {
+      width: rem(166.76);
+      height: rem(149.9);
+
+      @include breakpoint(small) {
+        width: rem(178);
+        height: rem(160);
+      }
+    }
+
+    & .about-subdetail__img4 {
+      width: rem(203.17);
+      height: rem(182.28);
+
+      @include breakpoint(small) {
+        width: rem(214);
+        height: rem(192);
+      }
+    }
+  }
+}
