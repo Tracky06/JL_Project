@@ -1,0 +1,130 @@
+.bio {
+  position: relative;
+  top: 7.3125rem;
+  padding-bottom: 8.1875rem;
+}
+@media (min-width: 30em) {
+  .bio {
+    top: 6.25rem;
+  }
+}
+.bio__top {
+  border-top: 0.0625rem solid hsl(0, 0%, 85%);
+  border-bottom: 0.0625rem solid hsl(0, 0%, 85%);
+  display: flex;
+  align-items: center;
+  height: 2.4375rem;
+  margin-bottom: 1.75rem;
+  width: 100vw;
+}
+.bio__top a {
+  text-decoration: none;
+  color: var(--text-dark1);
+}
+.bio__top button {
+  height: 1.5rem;
+  width: 4.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3.125rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+@media (min-width: 30em) {
+  .bio__top button {
+    margin-left: 9.375rem;
+  }
+}
+.bio__top img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.bio__top p {
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+}
+@media (min-width: 30em) {
+  .bio__content {
+    display: flex;
+    padding: 0 6.75rem 5.4375rem 9.5625rem;
+    gap: 2.5rem;
+  }
+}
+.bio__content-left {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1.62rem 3.085625rem;
+}
+@media (min-width: 30em) {
+  .bio__content-left {
+    margin: 0;
+  }
+}
+.bio__content-left h3 {
+  font-weight: 800;
+  font-size: 0.83625rem;
+  line-height: 1.0125rem;
+}
+.bio__content-left p {
+  font-size: 0.83625rem;
+  line-height: 1.255rem;
+  margin-bottom: 0.28375rem;
+}
+.bio__photo {
+  width: 19.5625rem;
+  height: 22.1875rem;
+  margin-bottom: 1.894375rem;
+}
+@media (min-width: 30em) {
+  .bio__photo {
+    width: 17.5rem;
+  }
+}
+.bio__photo img {
+  width: 100%;
+  height: 100%;
+}
+.bio__socials {
+  display: flex;
+  gap: 0.418125rem;
+}
+.bio__socials img {
+  width: 0.97625rem;
+  height: 0.97625rem;
+}
+.bio__content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4.0625rem 0 3.3125rem;
+}
+@media (min-width: 30em) {
+  .bio__content-right {
+    padding: 0;
+    align-items: flex-start;
+  }
+}
+.bio__content-right > h2 {
+  align-self: flex-start;
+  margin: 0 0 0.1875rem;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+}
+.bio__content-right p {
+  margin-bottom: 1.25rem;
+  width: 19.375rem;
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+  text-align: justify;
+}
+@media (min-width: 30em) {
+  .bio__content-right p {
+    width: 43.6875rem;
+  }
+}
+.bio__content-right .others {
+  line-height: 1.5rem;
+}/*# sourceMappingURL=bio.css.map */
