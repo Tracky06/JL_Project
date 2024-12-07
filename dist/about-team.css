@@ -1,0 +1,64 @@
+.about-team > h2 {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+  margin: 0 auto 3rem;
+  width: 7.5rem;
+}
+.about-team__carousel-container {
+  position: relative;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 0 6.3125rem 3.1875rem;
+  overflow: hidden;
+}
+@media (min-width: 30em) {
+  .about-team__carousel-container {
+    margin-left: 12.5625rem;
+  }
+}
+.about-team__carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.5s ease;
+  margin: 0;
+}
+.about-team__carousel-track a {
+  text-decoration: none;
+}
+.about-team__carousel-slide {
+  flex: 0 0 auto;
+  width: 66.6666666667vw; /* Mobile view: 1 1/3 images */
+  object-fit: cover;
+}
+@media (min-width: 30em) {
+  .about-team__carousel-slide {
+    width: 28.5714285714vw;
+  }
+}
+.about-team__scroll-btn {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  border: none;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+  transition: background-color 0.3s;
+}
+.about-team__scroll-btn img {
+  width: 100%;
+  height: 100%;
+}
+.about-team__scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.about-team__scroll-btn.right {
+  right: 2.5625rem;
+}
+.about-team__scroll-btn.left {
+  left: 0;
+  transform: scaleX(-1);
+}/*# sourceMappingURL=about-team.css.map */

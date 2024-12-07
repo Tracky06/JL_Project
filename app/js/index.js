@@ -188,3 +188,72 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start automatic sliding
     setInterval(nextSlide, 3000);
 });
+
+// Our Team Carousel on About page
+document.addEventListener("DOMContentLoaded", function () {
+  var container = document.querySelector(".about-team__carousel-container");
+  var track = container.querySelector(".about-team__carousel-track");
+  var rightBtn = container.querySelector(".about-team__scroll-btn.right");
+  var leftBtn = container.querySelector(".about-team__scroll-btn.left");
+  var slides = container.querySelectorAll(".about-team__carousel-slide");
+
+  // Initially hide left button
+  leftBtn.style.display = "none";
+
+  // Calculate scroll amount based on slide width
+  function calculateScrollAmount() {
+    var slideWidth = slides[0].getBoundingClientRect().width;
+    var visibleSlides = window.innerWidth >= 480 ? 3.5 : 1.5;
+    return slideWidth * visibleSlides;
+  }
+
+  // Track current scroll position
+  var currentScroll = 0;
+  var maxScroll = track.scrollWidth - container.clientWidth;
+
+  rightBtn.addEventListener("click", function () {
+    var scrollAmount = calculateScrollAmount();
+
+    // Calculate new scroll position
+    currentScroll += scrollAmount;
+
+    // Ensure we don't scroll beyond the end
+    if (currentScroll > maxScroll) {
+      currentScroll = maxScroll;
+    }
+
+    // Scroll the track
+    track.style.transform = `translateX(-${currentScroll}px)`;
+
+    // Show left button when scrolled
+    leftBtn.style.display = "block";
+
+    // Hide right button if at end
+    if (currentScroll >= maxScroll) {
+      rightBtn.style.display = "none";
+    }
+  });
+
+  leftBtn.addEventListener("click", function () {
+    var scrollAmount = calculateScrollAmount();
+
+    // Calculate new scroll position
+    currentScroll -= scrollAmount;
+
+    // Ensure we don't scroll before the start
+    if (currentScroll < 0) {
+      currentScroll = 0;
+    }
+
+    // Scroll the track
+    track.style.transform = `translateX(-${currentScroll}px)`;
+
+    // Show right button when scrolling back
+    rightBtn.style.display = "block";
+
+    // Hide left button if at start
+    if (currentScroll <= 0) {
+      leftBtn.style.display = "none";
+    }
+  });
+});
