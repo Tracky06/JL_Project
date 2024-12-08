@@ -1,0 +1,26 @@
+.gallery1-vid {
+  margin-bottom: 7.82625rem;
+}
+.gallery1-vid h2 {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+  text-align: center;
+  margin-bottom: 2.043125rem;
+}
+.gallery1-vid__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0 2rem;
+}
+.gallery1-vid__card {
+  width: 22.70375rem;
+  height: 12.9075rem;
+  border: 0.02875rem solid var(--text-dark1);
+  border-radius: 0.864375rem;
+}
+.gallery1-vid__card img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=gallery1-vid.css.map */

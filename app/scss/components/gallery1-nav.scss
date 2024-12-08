@@ -1,0 +1,40 @@
+@use "../util/" as *;
+
+.gallery1-nav {
+  margin: rem(64) rem(38) rem(136) 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: rem(44);
+
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    border-radius: rem(20);
+    border: none;
+    background-color: var(--primary-btn);
+    width: rem(127);
+    height: rem(44);
+    color: var(--text-white);
+  }
+
+  & > button > img {
+    width: rem(24);
+    height: rem(24);
+  }
+
+  &__p {
+    font-size: rem(12);
+    line-height: rem(14.52);
+
+    & span {
+      width: rem(34);
+      height: rem(18);
+      display: inline-block;
+      text-align: center;
+      background-color: hsla(0, 0%, 94%, 1);
+    }
+  }
+}

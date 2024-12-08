@@ -257,3 +257,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Gallery1 image pop-up
+document.querySelectorAll(".gallery1-image__photo img").forEach(image => {
+  image.onclick = () => {
+    document.querySelector(".gallery1-image__popup-image").style.display = "block";
+    document.querySelector(".gallery1-image__popup-image .img").src =
+      image.getAttribute("src");
+  };
+});
+
+document.querySelector(".gallery1-image__popup-image span").onclick = () => {
+  document.querySelector(".gallery1-image__popup-image").style.display = "none";
+};

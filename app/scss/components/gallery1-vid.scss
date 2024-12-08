@@ -1,0 +1,32 @@
+@use "../util/" as *;
+
+.gallery1-vid {
+  margin-bottom: rem(125.22);
+
+  & h2 {
+    font-weight: 800;
+    font-size: rem(25);
+    line-height: rem(30.26);
+    text-align: center;
+    margin-bottom: rem(32.69);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    padding: 0 rem(32);
+  }
+
+  &__card {
+    width: rem(363.26);
+    height: rem(206.52);
+    border: rem(0.46) solid var(--text-dark1);
+    border-radius: rem(13.83);
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

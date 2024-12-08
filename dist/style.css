@@ -1918,6 +1918,152 @@
   line-height: 1.5rem;
 }
 
+.top-content {
+  position: relative;
+  top: 8.125rem;
+}
+
+.gallery1-image {
+  padding: 0 2.628125rem 0 3.125rem;
+}
+.gallery1-image__h1 {
+  font-weight: 600;
+  font-size: 3.946875rem;
+  line-height: 4.77625rem;
+  margin-bottom: 0.933125rem;
+}
+.gallery1-image__group1 .left > div {
+  display: grid;
+  grid-template-columns: 12.195625rem 8.090625rem;
+  grid-template-rows: auto auto;
+  gap: 0.82875rem 0.710625rem;
+}
+.gallery1-image__photo {
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0.9375rem;
+}
+.gallery1-image__photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.gallery1-image__photo:hover img {
+  transform: scale(1.1);
+}
+.gallery1-image__photo--house-1 {
+  grid-column: span 2;
+  margin: 0;
+}
+.gallery1-image__photo--house-4 {
+  width: 20.92375rem;
+}
+.gallery1-image__photo--house-5, .gallery1-image__photo--house-6 {
+  width: 21rem;
+}
+.gallery1-image__photo--house-7, .gallery1-image__photo--house-8, .gallery1-image__photo--house-9, .gallery1-image__photo--house-10, .gallery1-image__photo--house-11 {
+  width: 20.9375rem;
+}
+.gallery1-image__popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.gallery1-image__popup-image span {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  cursor: pointer;
+  z-index: 100;
+  width: 1.964375rem;
+  height: 1.964375rem;
+}
+.gallery1-image__popup-image > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22.29375rem;
+  object-fit: cover;
+}
+@media (min-width: 30em) {
+  .gallery1-image__popup-image > img {
+    width: 95%;
+  }
+}
+.gallery1-image__close {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery1-nav {
+  margin: 4rem 2.375rem 8.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.75rem;
+}
+.gallery1-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: var(--primary-btn);
+  width: 7.9375rem;
+  height: 2.75rem;
+  color: var(--text-white);
+}
+.gallery1-nav > button > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.gallery1-nav__p {
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+}
+.gallery1-nav__p span {
+  width: 2.125rem;
+  height: 1.125rem;
+  display: inline-block;
+  text-align: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.gallery1-vid {
+  margin-bottom: 7.82625rem;
+}
+.gallery1-vid h2 {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.89125rem;
+  text-align: center;
+  margin-bottom: 2.043125rem;
+}
+.gallery1-vid__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0 2rem;
+}
+.gallery1-vid__card {
+  width: 22.70375rem;
+  height: 12.9075rem;
+  border: 0.02875rem solid var(--text-dark1);
+  border-radius: 0.864375rem;
+}
+.gallery1-vid__card img {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   font: 100%;
   box-sizing: border-box;

@@ -1,0 +1,34 @@
+.gallery1-nav {
+  margin: 4rem 2.375rem 8.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.75rem;
+}
+.gallery1-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+  border-radius: 1.25rem;
+  border: none;
+  background-color: var(--primary-btn);
+  width: 7.9375rem;
+  height: 2.75rem;
+  color: var(--text-white);
+}
+.gallery1-nav > button > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.gallery1-nav__p {
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+}
+.gallery1-nav__p span {
+  width: 2.125rem;
+  height: 1.125rem;
+  display: inline-block;
+  text-align: center;
+  background-color: hsl(0, 0%, 94%);
+}/*# sourceMappingURL=gallery1-nav.css.map */
