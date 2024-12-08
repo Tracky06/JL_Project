@@ -1926,17 +1926,45 @@
 .gallery1-image {
   padding: 0 2.628125rem 0 3.125rem;
 }
+@media (min-width: 30em) {
+  .gallery1-image {
+    padding: 0 7.8125rem 0 9.125rem;
+  }
+}
+.gallery1-image__image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+}
 .gallery1-image__h1 {
   font-weight: 600;
   font-size: 3.946875rem;
   line-height: 4.77625rem;
   margin-bottom: 0.933125rem;
 }
+@media (min-width: 30em) {
+  .gallery1-image__h1 {
+    font-size: 6.25rem;
+    line-height: 7.56375rem;
+    margin-bottom: 1.4375rem;
+  }
+}
+.gallery1-image__group1 {
+  display: flex;
+  gap: 1.5625rem;
+  align-items: flex-end;
+}
 .gallery1-image__group1 .left > div {
   display: grid;
   grid-template-columns: 12.195625rem 8.090625rem;
   grid-template-rows: auto auto;
   gap: 0.82875rem 0.710625rem;
+}
+@media (min-width: 30em) {
+  .gallery1-image__group1 .left > div {
+    grid-template-columns: 19.3125rem 12.8125rem;
+    gap: 1.3125rem 1.125rem;
+  }
 }
 .gallery1-image__photo {
   overflow: hidden;
@@ -1959,11 +1987,50 @@
 .gallery1-image__photo--house-4 {
   width: 20.92375rem;
 }
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-4 {
+    width: 28.25rem;
+  }
+}
 .gallery1-image__photo--house-5, .gallery1-image__photo--house-6 {
   width: 21rem;
 }
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-5, .gallery1-image__photo--house-6 {
+    width: 30.5625rem;
+  }
+}
 .gallery1-image__photo--house-7, .gallery1-image__photo--house-8, .gallery1-image__photo--house-9, .gallery1-image__photo--house-10, .gallery1-image__photo--house-11 {
   width: 20.9375rem;
+}
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-7 {
+    width: 39.4375rem;
+  }
+}
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-8 {
+    width: 22rem;
+  }
+}
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-9 {
+    width: 18.5rem;
+  }
+}
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-10 {
+    width: 19.375rem;
+  }
+}
+@media (min-width: 30em) {
+  .gallery1-image__photo--house-11 {
+    width: 22rem;
+  }
+}
+.gallery1-image__group2, .gallery1-image__group3, .gallery1-image__group4 {
+  display: flex;
+  justify-content: space-between;
 }
 .gallery1-image__popup-image {
   position: fixed;
@@ -2009,6 +2076,12 @@
   align-items: center;
   gap: 2.75rem;
 }
+@media (min-width: 30em) {
+  .gallery1-nav {
+    margin: 3.625rem 7.8125rem 6.125rem 0;
+    gap: 22.0625rem;
+  }
+}
 .gallery1-nav button {
   display: flex;
   align-items: center;
@@ -2020,6 +2093,11 @@
   width: 7.9375rem;
   height: 2.75rem;
   color: var(--text-white);
+}
+@media (min-width: 30em) {
+  .gallery1-nav button {
+    background-color: var(--secondary-btn1);
+  }
 }
 .gallery1-nav > button > img {
   width: 1.5rem;
@@ -2046,6 +2124,11 @@
   line-height: 1.89125rem;
   text-align: center;
   margin-bottom: 2.043125rem;
+}
+@media (min-width: 30em) {
+  .gallery1-vid h2 {
+    margin-bottom: 1.875rem;
+  }
 }
 .gallery1-vid__container {
   display: flex;

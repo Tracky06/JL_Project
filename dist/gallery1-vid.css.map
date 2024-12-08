@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../app/scss/components/gallery1-vid.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA","file":"gallery1-vid.css"}
+{"version":3,"sourceRoot":"","sources":["../app/scss/components/gallery1-vid.scss","../app/scss/util/breakpoints.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;EACA;;ACCF;EDNA;IAQI;;;AAIJ;EACE;EACA;EACA;EACA;;AAWF;EACE;EACA;EACA;EACA;;AAQA;EACE;EACA","file":"gallery1-vid.css"}

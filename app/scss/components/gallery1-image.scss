@@ -8,7 +8,14 @@
 .gallery1-image {
   padding: 0 rem(42.05) 0 rem(50);
 
+  @include breakpoint(small) {
+    padding: 0 rem(125) 0 rem(146);
+  }
+
   &__image-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
   }
 
   &__h1 {
@@ -16,15 +23,30 @@
     font-size: rem(63.15);
     line-height: rem(76.42);
     margin-bottom: rem(14.93);
+
+    @include breakpoint(small) {
+      font-size: rem(100);
+      line-height: rem(121.02);
+      margin-bottom: rem(23);
+    }
   }
 
   &__group1 {
+    display: flex;
+    gap: rem(25);
+    align-items: flex-end;
+
     & .left {
       & > div {
         display: grid;
         grid-template-columns: rem(195.13) rem(129.45);
         grid-template-rows: auto auto;
         gap: rem(13.26) rem(11.37);
+
+        @include breakpoint(small) {
+          grid-template-columns: rem(309) rem(205);
+          gap: rem(21) rem(18);
+        }
       }
     }
   }
@@ -52,11 +74,19 @@
 
     &--house-4 {
       width: rem(334.78);
+
+      @include breakpoint(small) {
+        width: rem(452);
+      }
     }
 
     &--house-5,
     &--house-6 {
       width: rem(336);
+
+      @include breakpoint(small) {
+        width: rem(489);
+      }
     }
 
     &--house-7,
@@ -66,6 +96,43 @@
     &--house-11 {
       width: rem(335);
     }
+
+    &--house-7 {
+      @include breakpoint(small) {
+        width: rem(631);
+      }
+    }
+
+    &--house-8 {
+      @include breakpoint(small) {
+        width: rem(352);
+      }
+    }
+
+    &--house-9 {
+      @include breakpoint(small) {
+        width: rem(296);
+      }
+    }
+
+    &--house-10 {
+      @include breakpoint(small) {
+        width: rem(310);
+      }
+    }
+
+    &--house-11 {
+      @include breakpoint(small) {
+        width: rem(352);
+      }
+    }
+  }
+
+  &__group2,
+  &__group3,
+  &__group4 {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__popup-image {

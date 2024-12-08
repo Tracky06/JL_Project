@@ -8,6 +8,11 @@
   text-align: center;
   margin-bottom: 2.043125rem;
 }
+@media (min-width: 30em) {
+  .gallery1-vid h2 {
+    margin-bottom: 1.875rem;
+  }
+}
 .gallery1-vid__container {
   display: flex;
   flex-direction: column;

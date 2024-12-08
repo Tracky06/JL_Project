@@ -7,6 +7,11 @@
   align-items: center;
   gap: rem(44);
 
+  @include breakpoint(small) {
+    margin: rem(58) rem(125) rem(98) 0;
+    gap: rem(353);
+  }
+
   & button {
     display: flex;
     align-items: center;
@@ -18,6 +23,10 @@
     width: rem(127);
     height: rem(44);
     color: var(--text-white);
+
+    @include breakpoint(small) {
+      background-color: var(--secondary-btn1);
+    }
   }
 
   & > button > img {
