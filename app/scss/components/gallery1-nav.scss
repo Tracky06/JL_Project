@@ -12,6 +12,37 @@
     gap: rem(353);
   }
 
+  & > div {
+    display: flex;
+    gap: rem(6);
+
+    @include breakpoint(small) {
+      gap: rem(12);
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: var(--text-white);
+    display: block;
+  }
+
+  &__back {
+    width: rem(65);
+    height: rem(44);
+    border: rem(1) solid hsla(0, 0%, 0%, 1);
+    border-radius: rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    & img {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
   & button {
     display: flex;
     align-items: center;
@@ -23,13 +54,14 @@
     width: rem(127);
     height: rem(44);
     color: var(--text-white);
+    cursor: pointer;
 
     @include breakpoint(small) {
       background-color: var(--secondary-btn1);
     }
   }
 
-  & > button > img {
+  & button > img {
     width: rem(24);
     height: rem(24);
   }
@@ -41,8 +73,9 @@
     & span {
       width: rem(34);
       height: rem(18);
-      display: inline-block;
-      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       background-color: hsla(0, 0%, 94%, 1);
     }
   }

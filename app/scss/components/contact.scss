@@ -1,0 +1,258 @@
+@use "../util/" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include breakpoint(small) {
+    flex-direction: row;
+  }
+
+  &__image {
+    width: 100%;
+
+    @include breakpoint(small) {
+      order: 1;
+      width: 35.9375%;
+    }
+
+    & > img {
+      width: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__content {
+    padding: rem(31) rem(33) rem(64) rem(37);
+
+    @include breakpoint(small) {
+      width: 64.0625%;
+      padding: rem(111) rem(113) rem(92) rem(126);
+    }
+
+    & > h1 {
+      font-weight: 600;
+      font-size: rem(70);
+      line-height: rem(73.52);
+
+      @include breakpoint(small) {
+        font-size: rem(100);
+        line-height: rem(105.02);
+        margin-left: rem(-16);
+      }
+    }
+
+    & > p {
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: rem(14.52);
+      width: rem(248);
+      margin: rem(10) 0 rem(36);
+
+      @include breakpoint(small) {
+        font-size: rem(15);
+        line-height: rem(18.15);
+        margin-bottom: rem(82);
+      }
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: rem(74);
+
+      @include breakpoint(small) {
+        flex-direction: row;
+        gap: rem(52);
+      }
+    }
+  }
+
+  &__form {
+    @include breakpoint(small) {
+      order: 1;
+    }
+  }
+
+  &__form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: rem(30);
+    margin-bottom: rem(25);
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+
+      & label {
+        font-weight: 400;
+        font-size: rem(9);
+        line-height: rem(10.89);
+        color: var(--text-dark4);
+      }
+
+      & input {
+        border: none;
+        border-bottom: rem(0.5) solid var(--text-dark4);
+      }
+    }
+  }
+
+  &__form-item1,
+  &__form-item4 {
+    grid-column: span 2;
+  }
+
+  &__submit-btn {
+    width: rem(130);
+    height: rem(38);
+    border: none;
+    border-radius: rem(20);
+    background-color: var(--primary-btn);
+    color: var(--text-white);
+    font-size: rem(12);
+    line-height: rem(14.52);
+    cursor: pointer;
+
+    @include breakpoint(small) {
+      background-color: var(--secondary-btn1);
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: rem(20) rem(16);
+
+    @include breakpoint(small) {
+      height: rem(190);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: rem(17.2);
+    align-items: center;
+
+    & > div {
+      width: rem(19.05);
+      height: rem(19.05);
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & > p {
+      font-weight: 300;
+      font-size: rem(12.5);
+      line-height: rem(19.69);
+    }
+
+    &--location {
+      grid-column: span 2;
+
+      @include breakpoint(small) {
+        width: rem(176.77);
+        height: rem(40);
+      }
+
+      & p {
+        @include breakpoint(small) {
+          width: rem(143);
+        }
+      }
+    }
+
+    &--telephone {
+      order: 1;
+
+      @include breakpoint(small) {
+        order: 0;
+      }
+    }
+  }
+}
+
+.thanks {
+  display: grid;
+  place-content: center;
+  min-height: rem(536);
+
+  & > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      font-weight: 800;
+      font-size: rem(24);
+      line-height: rem(25.21);
+      margin: rem(10) 0 rem(6);
+
+      @include breakpoint(small) {
+        margin-bottom: rem(14);
+      }
+    }
+
+    & p {
+      font-weight: 300;
+      font-size: rem(15.98);
+      line-height: rem(27.32);
+      text-align: center;
+      margin-bottom: rem(25);
+      width: 80%;
+
+      @include breakpoint(small) {
+        margin-bottom: rem(20);
+        width: 57.5%;
+      }
+    }
+
+    & button {
+      width: rem(130);
+      height: rem(38);
+      border: none;
+      border-radius: rem(20);
+      padding: rem(11) rem(57);
+      background-color: var(--primary-btn);
+      color: var(--text-white);
+      font-size: rem(12);
+      line-height: rem(14.52);
+      cursor: pointer;
+
+      @include breakpoint(small) {
+        background-color: var(--secondary-btn1);
+      }
+    }
+  }
+
+  &__image {
+    width: rem(72);
+
+    @include breakpoint(small) {
+      width: rem(120);
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.back-button {
+  padding-top: rem(117);
+
+  @include breakpoint(small) {
+    padding-top: rem(100);
+  }
+}

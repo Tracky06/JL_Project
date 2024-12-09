@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header background-content">
+      <div class="header__logo">
+        <img src="./images/header/JL_logo.png" alt="JL_logo" />
+      </div>
+      <nav>
+        <ul class="header__nav-bar">
+          <li><a href="#" class="hidden" id="focusmeplease">Home</a></li>
+          <li><a href="#">Now Selling</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery1.html">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <section class="contact">
+      <article class="contact__image">
+        <img src="./images/contact/photo.png" alt="" />
+      </article>
+      <article class="contact__content">
+        <h1>Contact</h1>
+        <p>
+          For any enquiries, or just say hello, get in touch and contact us.
+        </p>
+        <div>
+          <div class="contact__form">
+            <form action="./contact-thank-you.html">
+              <div class="contact__form-grid">
+                <div class="contact__form-item1">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" />
+                </div>
+                <div class="contact__form-item2">
+                  <label for="number">Phone Number</label>
+                  <input type="text" id="number" name="number" />
+                </div>
+                <div class="contact__form-item3">
+                  <label for="email">E-mail</label>
+                  <input type="text" id="email" name="email" />
+                </div>
+                <div class="contact__form-item4">
+                  <label for="message">Message</label>
+                  <input type="text" id="message" name="message" />
+                </div>
+              </div>
+              <input type="submit" value="Send" class="contact__submit-btn" />
+            </form>
+          </div>
+          <div class="contact__info">
+            <div class="contact__item contact__item--location">
+              <div>
+                <img src="./images/contact/location.png" alt="location" />
+              </div>
+              <p>Number 1 Lindsay Park, Achimota. Accra, Ghana</p>
+            </div>
+            <div class="contact__item contact__item--telephone">
+              <div>
+                <img src="./images/contact/telephone.png" alt="call-us" />
+              </div>
+              <p>+233 (0)302 449 037</p>
+            </div>
+            <div class="contact__item contact__item--message">
+              <div>
+                <img src="./images/contact/message.png" alt="text-us" />
+              </div>
+              <p>info@jlpropertiesgh.com</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <article class="footer__item1">
+          <div class="footer__1">
+            <img
+              src="./images/footer/logo-white.png"
+              alt="JL__logo"
+              class="footer__logo"
+            />
+            <p class="footer__text">
+              As predominant real estate developers, we have over the years
+              played and continue to take a major role in the expansion of the
+              country's housing and infrastructural needs.
+            </p>
+          </div>
+          <div class="footer__2">
+            <h2 class="footer__h2">Quick Links</h2>
+            <ul>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Vacancies</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__3">
+            <h2 class="footer__h2">Legal and Privacy</h2>
+            <ul>
+              <li><a href="./terms-and-policies.html">Terms & Policies</a></li>
+              <li><a href="./terms-of-use.html">Terms Of Use</a></li>
+              <li><a href="./privacy-policies.html">Privacy Policies</a></li>
+              <li><a href="./brand-guidelines.html">Brand Guidelines</a></li>
+              <li><a href="./other-policies.html">Other Policies</a></li>
+            </ul>
+          </div>
+          <div class="footer__4">
+            <h2 class="footer__h2">Social Media</h2>
+            <div class="footer__socials">
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/facebook.png" alt="Facebook" />
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/instagram.png" alt="Instagram" />
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/twitter.png" alt="Twitter" />
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/linkedIn.png" alt="LinkedIn" />
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/youtube.png" alt="YouTube" />
+                </a>
+              </div>
+              <div class="footer__icon">
+                <a href="#">
+                  <img src="./images/footer/tiktok.png" alt="TikTok" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="footer__item2">
+          <p class="footer__copyright">
+            @ 2024 JL Properties. All rights reserved.
+          </p>
+        </article>
+      </div>
+    </footer>
+
+    <script src="./app/js/index.js"></script>
+  </body>
+</html>

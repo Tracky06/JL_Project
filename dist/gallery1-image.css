@@ -108,9 +108,11 @@
     width: 22rem;
   }
 }
-.gallery1-image__group2, .gallery1-image__group3, .gallery1-image__group4 {
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 30em) {
+  .gallery1-image__group2, .gallery1-image__group3, .gallery1-image__group4 {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .gallery1-image__popup-image {
   position: fixed;

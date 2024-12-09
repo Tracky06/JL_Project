@@ -1,0 +1,40 @@
+.legal-policies {
+  padding: 0 4.0625rem 0 3.5625rem;
+  margin-bottom: 8.125rem;
+}
+@media (min-width: 30em) {
+  .legal-policies {
+    padding: 0 7.8125rem 0 10rem;
+    margin-bottom: 6.5625rem;
+  }
+}
+.legal-policies h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.575625rem;
+  margin-bottom: 1.4375rem;
+}
+.legal-policies p, .legal-policies h3, .legal-policies ul {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 30em) {
+  .legal-policies p, .legal-policies h3, .legal-policies ul {
+    font-size: 0.8125rem;
+    line-height: 1.625rem;
+  }
+}
+.legal-policies h3 {
+  font-weight: 700;
+}
+.legal-policies h3 > .normal {
+  font-weight: 300;
+}
+.legal-policies p, .legal-policies ul {
+  font-weight: 300;
+}
+.legal-policies > ul {
+  margin-left: 1.25rem;
+}/*# sourceMappingURL=legal-policies.css.map */

@@ -1,0 +1,49 @@
+@use "../util/" as *;
+
+.legal-policies {
+  padding: 0 rem(65) 0 rem(57);
+  margin-bottom: rem(130);
+
+  @include breakpoint(small) {
+    padding: 0 rem(125) 0 rem(160);
+    margin-bottom: rem(105);
+  }
+
+  & h2 {
+    font-weight: 800;
+    font-size: rem(24);
+    line-height: rem(25.21);
+    margin-bottom: rem(23);
+  }
+
+  & p,
+  & h3,
+  & ul {
+    font-size: rem(12);
+    line-height: rem(24);
+    text-align: justify;
+    margin-bottom: rem(20);
+
+    @include breakpoint(small) {
+      font-size: rem(13);
+      line-height: rem(26);
+    }
+  }
+
+  & h3 {
+    font-weight: 700;
+
+    & > .normal {
+      font-weight: 300;
+    }
+  }
+
+  & p,
+  & ul {
+    font-weight: 300;
+  }
+
+  & > ul {
+    margin-left: rem(20);
+  }
+}

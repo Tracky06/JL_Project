@@ -131,8 +131,10 @@
   &__group2,
   &__group3,
   &__group4 {
-    display: flex;
-    justify-content: space-between;
+    @include breakpoint(small) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__popup-image {
