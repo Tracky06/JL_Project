@@ -36,6 +36,7 @@
 @media (min-width: 30em) {
   .latest__item3 {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.3125rem;
   }
 }
@@ -55,18 +56,18 @@
 .latest__second {
   width: 100%;
   height: 12.8125rem;
-  padding: 1.6875rem 3.25rem 1.375rem 1.5625rem;
+  padding: 1.6875rem 1.875rem 1.375rem 1.5625rem;
   background-color: hsl(0, 0%, 95%);
 }
 .latest__second > h3 {
-  width: 15.0625rem;
+  width: 15.625rem;
   font-weight: 600;
   font-size: 0.9375rem;
   line-height: 0.984375rem;
   margin-bottom: 0.3125rem;
 }
 .latest__text {
-  width: 14.4375rem;
+  width: 14.6875rem;
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 0.9075rem;
@@ -80,7 +81,6 @@
 }
 @media (min-width: 30em) {
   .latest__card-footer {
-    position: absolute;
     top: 34.6875rem;
   }
 }

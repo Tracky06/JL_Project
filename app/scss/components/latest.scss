@@ -42,6 +42,7 @@
   &__item3 {
     @include breakpoint(small) {
       display: flex;
+      flex-wrap: wrap;
       gap: rem(21);
     }
   }
@@ -65,11 +66,11 @@
   &__second {
     width: 100%;
     height: rem(205);
-    padding: rem(27) rem(52) rem(22) rem(25);
+    padding: rem(27) rem(30) rem(22) rem(25);
     background-color: hsla(0, 0%, 95%, 1);
 
     & > h3 {
-      width: rem(241);
+      width: rem(250);
       font-weight: 600;
       font-size: rem(15);
       line-height: rem(15.75);
@@ -78,7 +79,7 @@
   }
 
   &__text {
-    width: rem(231);
+    width: rem(235);
     font-weight: 300;
     font-size: rem(12);
     line-height: rem(14.52);
@@ -92,7 +93,7 @@
     align-items: center;
 
     @include breakpoint(small) {
-      position: absolute;
+      //position: absolute;
       top: rem(555);
     }
 

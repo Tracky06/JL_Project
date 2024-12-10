@@ -1,0 +1,57 @@
+.blog-hero {
+  width: 100%;
+  padding: 11.375rem 5.5625rem 6.6875rem 2.5625rem;
+  display: flex;
+  align-items: flex-start;
+  background-image: url("../images/blog/blog-background.png");
+  background-repeat: no-repeat;
+  background-size: auto 30.8125rem;
+  background-position-x: center;
+}
+.blog-hero__JL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blog-hero__JL > p {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.134375rem;
+  width: 6.375rem;
+  height: 1.125rem;
+  transform: translate(-2.625rem, 2.8125rem) rotate(90deg);
+}
+.blog-hero__JL > div {
+  width: 0.3125rem;
+  height: 2.375rem;
+  background-color: var(--text-dark1);
+  transform: translate(0.34375rem, 5.625rem);
+}
+.blog-hero__content {
+  margin-left: -1.875rem;
+}
+.blog-hero__content > h1 {
+  font-weight: 600;
+  font-size: 4.375rem;
+  line-height: 4.595rem;
+}
+.blog-hero__content > div {
+  margin-left: 0.375rem;
+}
+.blog-hero__content > div > h2 {
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.5125rem;
+}
+.blog-hero__content > div > p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.9075rem;
+  text-align: justify;
+}
+
+.blog-cards {
+  padding: 0 3.75rem 0 4.4375rem;
+  z-index: 1;
+  transform: translateY(-4.0625rem);
+}/*# sourceMappingURL=blog-hero.css.map */

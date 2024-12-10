@@ -1,0 +1,221 @@
+@use "../util/" as *;
+
+.blog-hero {
+  width: 100%;
+  padding: rem(182) rem(89) rem(107) rem(41);
+  display: flex;
+  align-items: flex-start;
+  background-image: url("../images/blog/blog-background.png");
+  background-repeat: no-repeat;
+  background-size: auto rem(493);
+  background-position-x: center;
+
+  @include breakpoint(small) {
+    padding: rem(122) rem(147) rem(84) rem(100);
+    background-size: cover;
+  }
+
+  &__JL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > p {
+      font-weight: 400;
+      font-size: rem(15);
+      line-height: rem(18.15);
+      width: rem(102);
+      height: rem(18);
+      transform: translate(rem(-42), rem(45)) rotate(90deg);
+
+      @include breakpoint(small) {
+        transform: translate(rem(-42), rem(100)) rotate(90deg);
+      }
+    }
+
+    & > div {
+      width: rem(5);
+      height: rem(38);
+      background-color: var(--text-dark1);
+      transform: translate(rem(5.5), rem(90));
+
+      @include breakpoint(small) {
+        transform: translate(rem(5.5), rem(155));
+      }
+    }
+  }
+
+  &__content {
+    margin-left: rem(-30);
+
+    @include breakpoint(small) {
+      display: flex;
+      gap: rem(392);
+    }
+
+    & > h1 {
+      font-weight: 600;
+      font-size: rem(70);
+      line-height: rem(73.52);
+
+      @include breakpoint(small) {
+        font-size: rem(100);
+        line-height: rem(105.02);
+      }
+    }
+
+    & > div {
+      margin-left: rem(6);
+      transform: translateY(rem(50));
+
+      & > h2 {
+        font-weight: 900;
+        font-size: rem(20);
+        line-height: rem(24.2);
+      }
+
+      & > p {
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(14.52);
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.blog-cards {
+  padding: 0 rem(60) 0 rem(71);
+  z-index: 1;
+  transform: translateY(rem(-65));
+
+  @include breakpoint(small) {
+    transform: translateY(rem(-30));
+    padding: 0 rem(173) 0 rem(174);
+    position: relative;
+  }
+}
+
+.blog-newsletter {
+  display: flex;
+  justify-content: center;
+  color: var(--text-white);
+  margin-bottom: rem(21);
+
+  @include breakpoint(small) {
+    margin-bottom: rem(45);
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    width: 73.13%;
+
+    @include breakpoint(small) {
+      width: 72.73%;
+      height: rem(220);
+      flex-direction: row;
+    }
+  }
+
+  &__heading {
+    padding: rem(43) rem(30) rem(58) rem(26);
+    background-color: hsla(0, 0%, 5%, 1);
+    border-radius: rem(20);
+
+    @include breakpoint(small) {
+      padding: rem(43) rem(44) rem(32) rem(50);
+      width: 70.78%;
+    }
+
+    & > h2 {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: rem(24.2);
+    }
+
+    & > p {
+      font-size: rem(12);
+      line-height: rem(14.52);
+      margin-bottom: rem(25);
+
+      @include breakpoint(small) {
+        margin-bottom: rem(11);
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    & > form {
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        margin-bottom: rem(23);
+
+        @include breakpoint(small) {
+          flex-direction: row;
+          gap: rem(11);
+        }
+
+        & div:nth-child(1) {
+          @include breakpoint(small) {
+            width: rem(271);
+          }
+        }
+
+        & div:nth-child(2) {
+          @include breakpoint(small) {
+            width: rem(336);
+          }
+        }
+
+        & div {
+          width: 100%;
+
+          & > input {
+            width: 100%;
+            height: rem(38);
+          }
+        }
+      }
+
+      & > input {
+        width: 50.58%;
+        height: rem(38);
+        border-radius: rem(20);
+        border: none;
+        color: var(--text-white);
+        background-color: var(--primary-btn);
+        font-size: rem(12);
+        line-height: rem(14.52);
+
+        @include breakpoint(small) {
+          width: rem(130);
+          background-color: var(--secondary-btn1);
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: rem(220);
+    transform: translateY(rem(-40));
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(small) {
+      width: rem(474);
+      transform: translate(rem(-20), rem(0));
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
