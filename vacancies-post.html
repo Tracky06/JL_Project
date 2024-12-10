@@ -26,7 +26,7 @@
           <li><a href="#">Now Selling</a></li>
           <li><a href="./about.html">About Us</a></li>
           <li><a href="./gallery1.html">Gallery</a></li>
-          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="#">Blog</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -37,58 +37,83 @@
       </button>
     </header>
 
-    <section class="bio">
+    <section class="back-button">
       <article class="bio__top">
-        <a href="./about.html">
+        <a href="./vacancies.html">
           <button>
             <img src="./images/misc/back-arrow.png" alt="back" />
             <p>Back</p>
           </button>
         </a>
       </article>
-      <article class="bio__content">
-        <div class="bio__content-left">
-          <div class="bio__photo">
-            <img src="./images/bio/daniel.png" alt="Daniel" />
-          </div>
-          <h3>Mr Daniel Ansah - Obuobi</h3>
-          <p>General Manager (Finance)</p>
-          <div class="bio__socials">
-            <img src="./images/misc/linkedin.png" alt="linkedIn" />
-            <img src="./images/misc/facebook.png" alt="Facebook" />
-          </div>
-        </div>
-        <div class="bio__content-right">
-          <h2>Biography</h2>
-          <div>
-            <p class="others">
-              He is the General Manager (Finance) of JL Properties. Daniel has
-              over 16 years’ experience in the banking sector. He began his
-              professional carrier with the then Metropolitan and Allied Bank as
-              Operations Officer from 2001 to 2004. He also held the position of
-              Operations Manager/ Branch Manager from 2004-2008 at UBA Ghana. He
-              also worked at CAL Bank, Branch Management and Risk Department at
-              the Senior Level Position (2009-2015). Immediately before joining
-              JL Properties Limited Mr. Daniel Obuobi worked at Beige Capital as
-              Regional Credit Risk Manager from 2016 to 2017 and as well Private
-              Business Consultant in 2018.
-            </p>
-            <p class="others">
-              He holds MBA in Banking and Finance from the School Business,
-              Kwame Nkrumah University of Science and Technology, Kumasi. He
-              also holds Bachelor of Art in   Economics and Statistics combined
-              from the University of Ghana-Legon. . Besides the banking carrier,
-              he has also consulted for a number of businesses in the areas of
-              Management and Financial Advisory Services. He has strength in
-              Business Restructuring, Financial Advisory, Risk Management and
-              Business Negotiations.
-            </p>
-          </div>
-        </div>
-      </article>
     </section>
 
-    <footer class="footer transform">
+    <main class="vacancies__main">
+      <article>
+        <section class="vacancies__info">
+          <div id="vacancyContent">
+            <h2 id="vacancyTitle"></h2>
+            <h3 id="vacancySubtitle"></h3>
+            <p id="vacancyDescription"></p>
+            <h3 id="vacancyReqTitle"></h3>
+            <p id="vacancyRequirements"></p>
+          </div>
+        </section>
+        <section class="vacancies__form1">
+          <div>
+            <form action="">
+              <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" />
+              </div>
+              <div class="vacancies__together">
+                <div>
+                  <label for="number">Phone Number</label>
+                  <input type="text" id="number" name="number" />
+                </div>
+                <div>
+                  <label for="email">E-mail</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" />
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="vacancies__form2">
+          <div>
+            <form id="uploadForm" enctype="multipart/form-data">
+              <!-- File input -->
+              <input type="file" id="fileInput" />
+              <div class="vacancies__file-upload">
+                <label for="fileInput" class="upload-button">
+                  <img src="./images/vacancies/add.png" alt="" />
+                  <div>ADD</div>
+                </label>
+                <div class="file-name" id="fileName">
+                  Attach file (Cv, Portfolio)
+                </div>
+              </div>
+
+              <!-- Button to trigger the file selection -->
+              <div class="vacancies__btn">
+                <button type="submit">
+                  <a href="./vacancies-thank-you.html">Send</a>
+                </button>
+              </div>
+            </form>
+
+            <!-- Area to display selected file details -->
+            <p id="fileInfo"></p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
       <div>
         <article class="footer__item1">
           <div class="footer__1">
@@ -107,8 +132,8 @@
             <h2 class="footer__h2">Quick Links</h2>
             <ul>
               <li><a href="./about.html">About</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="./vacancies.html">Vacancies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Vacancies</a></li>
               <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
@@ -167,5 +192,6 @@
     </footer>
 
     <script src="./app/js/index.js"></script>
+    <script src="./app/js/vacancies.js"></script>
   </body>
 </html>

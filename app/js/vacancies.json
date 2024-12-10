@@ -1,0 +1,49 @@
+{
+    "vacancies": [
+      {
+        "id": 1,
+        "department": "Sales",
+        "jobname": "Sales Executive",
+        "jobtype": "Regular",
+        "image": "./images/vacancies/sales.png",
+        "description": "Are you a motivated and results-driven individual with a passion for sales? Join our dynamic team as a Sales Executive and help drive the growth of our business! As a Sales Executive, you'll be at the forefront of our sales strategy, identifying and pursuing new business opportunities while building lasting relationships with clients. Your role will include generating leads, presenting our products and services, negotiating deals, and closing sales to meet targets and drive success.",
+        "requirements": "Strong communication and negotiation skills. A passion for delivering exceptional customer experiences. Ability to identify market trends and customer needs. A track record of meeting or exceeding sales targets. If you’re ready to take your sales career to the next level and make a real impact, apply today and become a key part of our team!",
+        "dateposted": "2024-06-08",
+        "status": "Open"
+      },
+      {
+        "id": 2,
+        "department": "Security",
+        "jobname": "Security Officer",
+        "jobtype": "Regular",
+        "image": "./images/vacancies/security.png",
+        "description": "We are seeking vigilant and reliable Security Officers to ensure the safety and security of our premises. As a Security Officer, you will patrol the property, monitor surveillance systems, and enforce company security policies.",
+        "requirements": "Strong observational skills and attention to detail. Ability to handle emergency situations calmly and effectively. Good physical condition and stamina. Prior experience in security is a plus.",
+        "dateposted": "2024-06-07",
+        "status": "Open"
+      },
+      {
+        "id": 3,
+        "department": "Customer Service",
+        "jobname": "HR Officer",
+        "jobtype": "Regular",
+        "image": "./images/vacancies/hr-officer.png",
+        "description": "Join our team as an HR Officer and play a key role in managing our workforce. Responsibilities include recruitment, employee relations, training, and ensuring compliance with company policies.",
+        "requirements": "Excellent interpersonal and organizational skills. Knowledge of HR practices and labor laws. Ability to manage recruitment and onboarding processes. Proficiency in HR software is preferred.",
+        "dateposted": "2024-06-06",
+        "status": "Open"
+      },
+      {
+        "id": 4,
+        "department": "Marketing",
+        "jobname": "Marketer",
+        "jobtype": "Regular",
+        "image": "./images/vacancies/marketer.png",
+        "description": "We are looking for a creative and strategic Marketer to promote our products and services. Your role will involve creating campaigns, analyzing market trends, and developing innovative strategies to increase brand awareness.",
+        "requirements": "Strong analytical and creative skills. Experience with digital marketing tools and platforms. Ability to work in a fast-paced environment and meet deadlines. Previous experience in a marketing role is required.",
+        "dateposted": "2024-06-05",
+        "status": "Open"
+      }
+    ]
+  }
+  

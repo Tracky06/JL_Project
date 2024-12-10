@@ -1,0 +1,289 @@
+@use "../util/" as *;
+
+.vacancies {
+  padding: rem(160) rem(54) rem(152) rem(58);
+
+  @include breakpoint(small) {
+    padding: rem(140) rem(148) rem(140);
+  }
+
+  &__heading {
+    & > h1 {
+      font-weight: 800;
+      font-size: rem(30);
+      line-height: rem(31.51);
+      text-align: center;
+      margin-bottom: rem(6);
+
+      @include breakpoint(small) {
+        font-size: rem(36);
+        line-height: rem(37.81);
+        margin-bottom: rem(12);
+      }
+    }
+
+    & > p {
+      font-weight: 300;
+      font-size: rem(16);
+      line-height: rem(24.8);
+      text-align: center;
+      margin-bottom: rem(53);
+
+      @include breakpoint(small) {
+        margin-bottom: rem(42);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    @include breakpoint(small) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: rem(30);
+    }
+  }
+
+  &__card {
+    width: 100%;
+    border-radius: rem(20);
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    padding: rem(7) rem(8) rem(41);
+
+    @include breakpoint(small) {
+      width: calc((100% - rem(60)) / 3);
+    }
+  }
+
+  &__image {
+    width: fit-content;
+    border-radius: rem(20);
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-white);
+
+    & > div {
+      margin-left: rem(20);
+
+      & > h2 {
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(16.8);
+        margin-bottom: rem(7);
+      }
+
+      & > p {
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(12.6);
+        color: hsla(0, 0%, 54%, 1);
+      }
+    }
+
+    & > button {
+      width: rem(98);
+      height: rem(27);
+      border: none;
+      border-radius: rem(20);
+      padding: rem(6) rem(19);
+      background-color: var(--primary-btn);
+      color: var(--text-white);
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: rem(12.6);
+      margin-top: rem(-3);
+
+      & > a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  // Styles for vacancies-post.html begin here!
+  &__main {
+    padding: rem(29) rem(58) rem(139) rem(44);
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(small) {
+      padding: rem(43) rem(350) rem(119) rem(350);
+    }
+  }
+
+  &__info {
+    & > div {
+      & > h2 {
+        font-weight: 800;
+        font-size: rem(24);
+        line-height: rem(25.21);
+        text-align: center;
+        margin-bottom: rem(43);
+
+        @include breakpoint(small) {
+          text-align: left;
+          margin-bottom: rem(54);
+        }
+      }
+
+      & > h3 {
+        font-weight: 400;
+        font-size: rem(11.98);
+        line-height: rem(14.5);
+        margin-bottom: rem(11);
+        color: var(--text-dark4);
+      }
+
+      & > p {
+        font-weight: 300;
+        font-size: rem(15.98);
+        line-height: rem(19.34);
+        margin-bottom: rem(38);
+        text-align: justify;
+      }
+    }
+  }
+
+  &__form1 {
+    margin-bottom: rem(76);
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: rem(39);
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & .vacancies__together {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+
+        @include breakpoint(small) {
+          flex-direction: row;
+          gap: rem(153.97);
+        }
+
+        & label,
+        & input {
+          display: block;
+
+          @include breakpoint(small) {
+            width: rem(213.03);
+          }
+        }
+      }
+
+      & label {
+        font-weight: 400;
+        font-size: rem(11.98);
+        line-height: rem(14.5);
+        color: var(--text-dark4);
+        margin-bottom: 10.65;
+      }
+
+      & input {
+        display: block;
+        width: 100%;
+        height: rem(29.35);
+        border: none;
+        border-bottom: rem(0.67) solid var(--text-dark4);
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: rem(58.22);
+    height: rem(38);
+    width: 100%;
+
+    @include breakpoint(small) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    & > button {
+      width: rem(130);
+      height: 100%;
+      border: none;
+      border-radius: rem(20);
+      background-color: var(--primary-btn);
+      color: var(--text-white);
+      font-size: rem(12);
+      line-height: rem(14.52);
+      cursor: pointer;
+
+      & > a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  &__form2 {
+    & input {
+      display: none;
+    }
+  }
+
+  &__file-upload {
+    display: flex;
+    align-items: baseline;
+    gap: rem(12.76);
+    transform: translateY(rem(-25));
+
+    & > label {
+      width: rem(83.24);
+      height: rem(28);
+      border: rem(0.76) solid var(--text-dark4);
+      border-radius: rem(11.35);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(1.65);
+      cursor: pointer;
+
+      & > img {
+        display: inline;
+        height: rem(18.16);
+        width: rem(18.16);
+      }
+    }
+
+    & > div {
+      font-weight: 300;
+      font-size: rem(14);
+      line-height: rem(16.94);
+      color: var(--text-dark4);
+      width: rem(200);
+      border-bottom: rem(0.67) solid var(--text-dark4);
+    }
+  }
+}
+
+#message {
+  height: rem(122.35);
+}

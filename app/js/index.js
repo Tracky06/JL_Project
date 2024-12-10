@@ -270,3 +270,4 @@ document.querySelectorAll(".gallery1-image__photo img").forEach(image => {
 document.querySelector(".gallery1-image__popup-image span").onclick = () => {
   document.querySelector(".gallery1-image__popup-image").style.display = "none";
 };
+
